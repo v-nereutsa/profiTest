@@ -35,11 +35,13 @@
 		CB3AB075271FEEAA00507609 /* VKNetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3AB074271FEEAA00507609 /* VKNetworkCommand.swift */; };
 		CB3AB077271FEEBD00507609 /* GetFriendsVKNetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3AB076271FEEBD00507609 /* GetFriendsVKNetworkCommand.swift */; };
 		CB3AB079271FF1AB00507609 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3AB078271FF1AB00507609 /* Constants.swift */; };
+		CB5D7E452721D415004C43C2 /* AlertEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D7E442721D415004C43C2 /* AlertEntity.swift */; };
 		CB88D6E9271F4E2E0054C608 /* NetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6E8271F4E2E0054C608 /* NetworkCommand.swift */; };
 		CB88D6EE271F50FE0054C608 /* FriendsTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6ED271F50FE0054C608 /* FriendsTableViewManager.swift */; };
 		CB88D6F0271F513E0054C608 /* FriendsTableViewManagerListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6EF271F513E0054C608 /* FriendsTableViewManagerListener.swift */; };
 		CB88D6F3271F51850054C608 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6F2271F51850054C608 /* Friend.swift */; };
 		CB88D6F5271F52730054C608 /* FriendsTableViewManagerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6F4271F52730054C608 /* FriendsTableViewManagerInput.swift */; };
+		CBA97A3C2721EA0C001DD5EF /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA97A3B2721EA0C001DD5EF /* UIImageViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,11 +75,13 @@
 		CB3AB074271FEEAA00507609 /* VKNetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKNetworkCommand.swift; sourceTree = "<group>"; };
 		CB3AB076271FEEBD00507609 /* GetFriendsVKNetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFriendsVKNetworkCommand.swift; sourceTree = "<group>"; };
 		CB3AB078271FF1AB00507609 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CB5D7E442721D415004C43C2 /* AlertEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertEntity.swift; sourceTree = "<group>"; };
 		CB88D6E8271F4E2E0054C608 /* NetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCommand.swift; sourceTree = "<group>"; };
 		CB88D6ED271F50FE0054C608 /* FriendsTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManager.swift; sourceTree = "<group>"; };
 		CB88D6EF271F513E0054C608 /* FriendsTableViewManagerListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManagerListener.swift; sourceTree = "<group>"; };
 		CB88D6F2271F51850054C608 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		CB88D6F4271F52730054C608 /* FriendsTableViewManagerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManagerInput.swift; sourceTree = "<group>"; };
+		CBA97A3B2721EA0C001DD5EF /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 		CB360BDB271DF970002830F2 /* profiTest */ = {
 			isa = PBXGroup;
 			children = (
+				CBA97A3A2721E9FB001DD5EF /* Extensions */,
 				CB360C0B271E026A002830F2 /* Common */,
 				CB360C10271E031C002830F2 /* Friends */,
 				CB360C0E271E0308002830F2 /* Repository */,
@@ -248,8 +253,17 @@
 			children = (
 				CB88D6F2271F51850054C608 /* Friend.swift */,
 				CB1A1D5627209C2D00D27AC8 /* CellEntity.swift */,
+				CB5D7E442721D415004C43C2 /* AlertEntity.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		CBA97A3A2721E9FB001DD5EF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CBA97A3B2721EA0C001DD5EF /* UIImageViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBA97A3C2721EA0C001DD5EF /* UIImageViewExtension.swift in Sources */,
 				CB1A1D4E2720804C00D27AC8 /* FriendsConfiguratorInput.swift in Sources */,
 				CB88D6EE271F50FE0054C608 /* FriendsTableViewManager.swift in Sources */,
 				CB1A1D512720832400D27AC8 /* FriendsRouter.swift in Sources */,
@@ -333,6 +348,7 @@
 				CB1A1D4C2720803500D27AC8 /* FriendsConfigurator.swift in Sources */,
 				CB360C19271E06B0002830F2 /* FriendsViewController.swift in Sources */,
 				CB1A1D532720832D00D27AC8 /* FriendsRouterInput.swift in Sources */,
+				CB5D7E452721D415004C43C2 /* AlertEntity.swift in Sources */,
 				CB360BDD271DF970002830F2 /* AppDelegate.swift in Sources */,
 				CB3AB075271FEEAA00507609 /* VKNetworkCommand.swift in Sources */,
 				CB1A1D552720865D00D27AC8 /* FriendsInteractorOutput.swift in Sources */,

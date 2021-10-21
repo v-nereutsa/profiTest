@@ -10,4 +10,5 @@ import UIKit
 
 protocol FriendsRouterInput: AnyObject {
     init(viewControler: UIViewController)
+    func show(alert: AlertEntity)
 }
