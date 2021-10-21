@@ -7,23 +7,77 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB1A1D4C2720803500D27AC8 /* FriendsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A1D4B2720803500D27AC8 /* FriendsConfigurator.swift */; };
+		CB1A1D4E2720804C00D27AC8 /* FriendsConfiguratorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A1D4D2720804C00D27AC8 /* FriendsConfiguratorInput.swift */; };
+		CB1A1D512720832400D27AC8 /* FriendsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A1D502720832400D27AC8 /* FriendsRouter.swift */; };
+		CB1A1D532720832D00D27AC8 /* FriendsRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A1D522720832D00D27AC8 /* FriendsRouterInput.swift */; };
+		CB1A1D552720865D00D27AC8 /* FriendsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A1D542720865D00D27AC8 /* FriendsInteractorOutput.swift */; };
+		CB1A1D5727209C2D00D27AC8 /* CellEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A1D5627209C2D00D27AC8 /* CellEntity.swift */; };
+		CB1A1D5A27209C5F00D27AC8 /* CommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A1D5927209C5F00D27AC8 /* CommonTableViewCell.swift */; };
+		CB1A1D5C2720AE4700D27AC8 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A1D5B2720AE4700D27AC8 /* Response.swift */; };
 		CB360BDD271DF970002830F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360BDC271DF970002830F2 /* AppDelegate.swift */; };
 		CB360BDF271DF970002830F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360BDE271DF970002830F2 /* SceneDelegate.swift */; };
-		CB360BE1271DF970002830F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360BE0271DF970002830F2 /* ViewController.swift */; };
-		CB360BE4271DF970002830F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB360BE2271DF970002830F2 /* Main.storyboard */; };
 		CB360BE6271DF971002830F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB360BE5271DF971002830F2 /* Assets.xcassets */; };
 		CB360BE9271DF971002830F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB360BE7271DF971002830F2 /* LaunchScreen.storyboard */; };
+		CB360BF5271E0122002830F2 /* FriendsViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360BF4271E0122002830F2 /* FriendsViewControllerInput.swift */; };
+		CB360BF7271E014B002830F2 /* FriendsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360BF6271E014B002830F2 /* FriendsPresenter.swift */; };
+		CB360BF9271E0155002830F2 /* FriendsPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360BF8271E0155002830F2 /* FriendsPresenterInput.swift */; };
+		CB360BFB271E016F002830F2 /* FriendsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360BFA271E016F002830F2 /* FriendsInteractor.swift */; };
+		CB360BFD271E017A002830F2 /* FriendsInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360BFC271E017A002830F2 /* FriendsInteractorInput.swift */; };
+		CB360BFF271E01C6002830F2 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360BFE271E01C6002830F2 /* Repository.swift */; };
+		CB360C01271E01D2002830F2 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360C00271E01D2002830F2 /* NetworkClient.swift */; };
+		CB360C03271E01DB002830F2 /* NetworkEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360C02271E01DB002830F2 /* NetworkEngine.swift */; };
+		CB360C09271E0226002830F2 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360C08271E0226002830F2 /* BaseRepository.swift */; };
+		CB360C13271E0535002830F2 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360C11271E0535002830F2 /* FriendTableViewCell.swift */; };
+		CB360C14271E0535002830F2 /* FriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB360C12271E0535002830F2 /* FriendTableViewCell.xib */; };
+		CB360C19271E06B0002830F2 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360C17271E06B0002830F2 /* FriendsViewController.swift */; };
+		CB360C1A271E06B0002830F2 /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB360C18271E06B0002830F2 /* FriendsViewController.xib */; };
+		CB3AB075271FEEAA00507609 /* VKNetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3AB074271FEEAA00507609 /* VKNetworkCommand.swift */; };
+		CB3AB077271FEEBD00507609 /* GetFriendsVKNetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3AB076271FEEBD00507609 /* GetFriendsVKNetworkCommand.swift */; };
+		CB3AB079271FF1AB00507609 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3AB078271FF1AB00507609 /* Constants.swift */; };
+		CB88D6E9271F4E2E0054C608 /* NetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6E8271F4E2E0054C608 /* NetworkCommand.swift */; };
+		CB88D6EE271F50FE0054C608 /* FriendsTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6ED271F50FE0054C608 /* FriendsTableViewManager.swift */; };
+		CB88D6F0271F513E0054C608 /* FriendsTableViewManagerListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6EF271F513E0054C608 /* FriendsTableViewManagerListener.swift */; };
+		CB88D6F3271F51850054C608 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6F2271F51850054C608 /* Friend.swift */; };
+		CB88D6F5271F52730054C608 /* FriendsTableViewManagerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6F4271F52730054C608 /* FriendsTableViewManagerInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB1A1D4B2720803500D27AC8 /* FriendsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsConfigurator.swift; sourceTree = "<group>"; };
+		CB1A1D4D2720804C00D27AC8 /* FriendsConfiguratorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsConfiguratorInput.swift; sourceTree = "<group>"; };
+		CB1A1D502720832400D27AC8 /* FriendsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRouter.swift; sourceTree = "<group>"; };
+		CB1A1D522720832D00D27AC8 /* FriendsRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRouterInput.swift; sourceTree = "<group>"; };
+		CB1A1D542720865D00D27AC8 /* FriendsInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsInteractorOutput.swift; sourceTree = "<group>"; };
+		CB1A1D5627209C2D00D27AC8 /* CellEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellEntity.swift; sourceTree = "<group>"; };
+		CB1A1D5927209C5F00D27AC8 /* CommonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTableViewCell.swift; sourceTree = "<group>"; };
+		CB1A1D5B2720AE4700D27AC8 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		CB360BD9271DF970002830F2 /* profiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = profiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB360BDC271DF970002830F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB360BDE271DF970002830F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CB360BE0271DF970002830F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CB360BE3271DF970002830F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB360BE5271DF971002830F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB360BE8271DF971002830F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB360BEA271DF971002830F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB360BF4271E0122002830F2 /* FriendsViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewControllerInput.swift; sourceTree = "<group>"; };
+		CB360BF6271E014B002830F2 /* FriendsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPresenter.swift; sourceTree = "<group>"; };
+		CB360BF8271E0155002830F2 /* FriendsPresenterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPresenterInput.swift; sourceTree = "<group>"; };
+		CB360BFA271E016F002830F2 /* FriendsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsInteractor.swift; sourceTree = "<group>"; };
+		CB360BFC271E017A002830F2 /* FriendsInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsInteractorInput.swift; sourceTree = "<group>"; };
+		CB360BFE271E01C6002830F2 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		CB360C00271E01D2002830F2 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		CB360C02271E01DB002830F2 /* NetworkEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEngine.swift; sourceTree = "<group>"; };
+		CB360C08271E0226002830F2 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
+		CB360C11271E0535002830F2 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		CB360C12271E0535002830F2 /* FriendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendTableViewCell.xib; sourceTree = "<group>"; };
+		CB360C17271E06B0002830F2 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		CB360C18271E06B0002830F2 /* FriendsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsViewController.xib; sourceTree = "<group>"; };
+		CB3AB074271FEEAA00507609 /* VKNetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKNetworkCommand.swift; sourceTree = "<group>"; };
+		CB3AB076271FEEBD00507609 /* GetFriendsVKNetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFriendsVKNetworkCommand.swift; sourceTree = "<group>"; };
+		CB3AB078271FF1AB00507609 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CB88D6E8271F4E2E0054C608 /* NetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCommand.swift; sourceTree = "<group>"; };
+		CB88D6ED271F50FE0054C608 /* FriendsTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManager.swift; sourceTree = "<group>"; };
+		CB88D6EF271F513E0054C608 /* FriendsTableViewManagerListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManagerListener.swift; sourceTree = "<group>"; };
+		CB88D6F2271F51850054C608 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		CB88D6F4271F52730054C608 /* FriendsTableViewManagerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManagerInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +91,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB1A1D4A2720802300D27AC8 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				CB1A1D4B2720803500D27AC8 /* FriendsConfigurator.swift */,
+				CB1A1D4D2720804C00D27AC8 /* FriendsConfiguratorInput.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		CB1A1D4F2720831800D27AC8 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CB1A1D502720832400D27AC8 /* FriendsRouter.swift */,
+				CB1A1D522720832D00D27AC8 /* FriendsRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CB1A1D5827209C4900D27AC8 /* FriendCell */ = {
+			isa = PBXGroup;
+			children = (
+				CB360C11271E0535002830F2 /* FriendTableViewCell.swift */,
+				CB1A1D5927209C5F00D27AC8 /* CommonTableViewCell.swift */,
+				CB360C12271E0535002830F2 /* FriendTableViewCell.xib */,
+			);
+			path = FriendCell;
+			sourceTree = "<group>";
+		};
 		CB360BD0271DF970002830F2 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +138,118 @@
 		CB360BDB271DF970002830F2 /* profiTest */ = {
 			isa = PBXGroup;
 			children = (
-				CB360BDC271DF970002830F2 /* AppDelegate.swift */,
-				CB360BDE271DF970002830F2 /* SceneDelegate.swift */,
-				CB360BE0271DF970002830F2 /* ViewController.swift */,
-				CB360BE2271DF970002830F2 /* Main.storyboard */,
+				CB360C0B271E026A002830F2 /* Common */,
+				CB360C10271E031C002830F2 /* Friends */,
+				CB360C0E271E0308002830F2 /* Repository */,
+				CB360C0F271E0312002830F2 /* Network */,
 				CB360BE5271DF971002830F2 /* Assets.xcassets */,
 				CB360BE7271DF971002830F2 /* LaunchScreen.storyboard */,
 				CB360BEA271DF971002830F2 /* Info.plist */,
 			);
 			path = profiTest;
+			sourceTree = "<group>";
+		};
+		CB360C0A271E0255002830F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB88D6EC271F50E80054C608 /* FriendsTableViewManager */,
+				CB360C17271E06B0002830F2 /* FriendsViewController.swift */,
+				CB360C18271E06B0002830F2 /* FriendsViewController.xib */,
+				CB360BF4271E0122002830F2 /* FriendsViewControllerInput.swift */,
+				CB1A1D5827209C4900D27AC8 /* FriendCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB360C0B271E026A002830F2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CB360BDC271DF970002830F2 /* AppDelegate.swift */,
+				CB360BDE271DF970002830F2 /* SceneDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CB360C0C271E0274002830F2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CB360BF6271E014B002830F2 /* FriendsPresenter.swift */,
+				CB360BF8271E0155002830F2 /* FriendsPresenterInput.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CB360C0D271E0285002830F2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CB360BFA271E016F002830F2 /* FriendsInteractor.swift */,
+				CB360BFC271E017A002830F2 /* FriendsInteractorInput.swift */,
+				CB1A1D542720865D00D27AC8 /* FriendsInteractorOutput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CB360C0E271E0308002830F2 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				CB360BFE271E01C6002830F2 /* Repository.swift */,
+				CB360C08271E0226002830F2 /* BaseRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		CB360C0F271E0312002830F2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CB88D6E7271F4DF30054C608 /* Commands */,
+				CB360C00271E01D2002830F2 /* NetworkClient.swift */,
+				CB360C02271E01DB002830F2 /* NetworkEngine.swift */,
+				CB3AB078271FF1AB00507609 /* Constants.swift */,
+				CB1A1D5B2720AE4700D27AC8 /* Response.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CB360C10271E031C002830F2 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				CB360C0A271E0255002830F2 /* View */,
+				CB360C0D271E0285002830F2 /* Interactor */,
+				CB360C0C271E0274002830F2 /* Presenter */,
+				CB88D6F1271F51790054C608 /* Entity */,
+				CB1A1D4F2720831800D27AC8 /* Router */,
+				CB1A1D4A2720802300D27AC8 /* Configurator */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		CB88D6E7271F4DF30054C608 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				CB88D6E8271F4E2E0054C608 /* NetworkCommand.swift */,
+				CB3AB074271FEEAA00507609 /* VKNetworkCommand.swift */,
+				CB3AB076271FEEBD00507609 /* GetFriendsVKNetworkCommand.swift */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		CB88D6EC271F50E80054C608 /* FriendsTableViewManager */ = {
+			isa = PBXGroup;
+			children = (
+				CB88D6ED271F50FE0054C608 /* FriendsTableViewManager.swift */,
+				CB88D6F4271F52730054C608 /* FriendsTableViewManagerInput.swift */,
+				CB88D6EF271F513E0054C608 /* FriendsTableViewManagerListener.swift */,
+			);
+			path = FriendsTableViewManager;
+			sourceTree = "<group>";
+		};
+		CB88D6F1271F51790054C608 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CB88D6F2271F51850054C608 /* Friend.swift */,
+				CB1A1D5627209C2D00D27AC8 /* CellEntity.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +310,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB360C1A271E06B0002830F2 /* FriendsViewController.xib in Resources */,
+				CB360C14271E0535002830F2 /* FriendTableViewCell.xib in Resources */,
 				CB360BE9271DF971002830F2 /* LaunchScreen.storyboard in Resources */,
 				CB360BE6271DF971002830F2 /* Assets.xcassets in Resources */,
-				CB360BE4271DF970002830F2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +324,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB360BE1271DF970002830F2 /* ViewController.swift in Sources */,
+				CB1A1D4E2720804C00D27AC8 /* FriendsConfiguratorInput.swift in Sources */,
+				CB88D6EE271F50FE0054C608 /* FriendsTableViewManager.swift in Sources */,
+				CB1A1D512720832400D27AC8 /* FriendsRouter.swift in Sources */,
+				CB360C03271E01DB002830F2 /* NetworkEngine.swift in Sources */,
+				CB360C01271E01D2002830F2 /* NetworkClient.swift in Sources */,
+				CB88D6E9271F4E2E0054C608 /* NetworkCommand.swift in Sources */,
+				CB1A1D4C2720803500D27AC8 /* FriendsConfigurator.swift in Sources */,
+				CB360C19271E06B0002830F2 /* FriendsViewController.swift in Sources */,
+				CB1A1D532720832D00D27AC8 /* FriendsRouterInput.swift in Sources */,
 				CB360BDD271DF970002830F2 /* AppDelegate.swift in Sources */,
+				CB3AB075271FEEAA00507609 /* VKNetworkCommand.swift in Sources */,
+				CB1A1D552720865D00D27AC8 /* FriendsInteractorOutput.swift in Sources */,
 				CB360BDF271DF970002830F2 /* SceneDelegate.swift in Sources */,
+				CB3AB077271FEEBD00507609 /* GetFriendsVKNetworkCommand.swift in Sources */,
+				CB360BFD271E017A002830F2 /* FriendsInteractorInput.swift in Sources */,
+				CB360BF9271E0155002830F2 /* FriendsPresenterInput.swift in Sources */,
+				CB1A1D5A27209C5F00D27AC8 /* CommonTableViewCell.swift in Sources */,
+				CB3AB079271FF1AB00507609 /* Constants.swift in Sources */,
+				CB88D6F5271F52730054C608 /* FriendsTableViewManagerInput.swift in Sources */,
+				CB1A1D5C2720AE4700D27AC8 /* Response.swift in Sources */,
+				CB360C13271E0535002830F2 /* FriendTableViewCell.swift in Sources */,
+				CB360BF5271E0122002830F2 /* FriendsViewControllerInput.swift in Sources */,
+				CB88D6F0271F513E0054C608 /* FriendsTableViewManagerListener.swift in Sources */,
+				CB1A1D5727209C2D00D27AC8 /* CellEntity.swift in Sources */,
+				CB360BFB271E016F002830F2 /* FriendsInteractor.swift in Sources */,
+				CB360BF7271E014B002830F2 /* FriendsPresenter.swift in Sources */,
+				CB88D6F3271F51850054C608 /* Friend.swift in Sources */,
+				CB360C09271E0226002830F2 /* BaseRepository.swift in Sources */,
+				CB360BFF271E01C6002830F2 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CB360BE2271DF970002830F2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB360BE3271DF970002830F2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CB360BE7271DF971002830F2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,9 +498,10 @@
 				INFOPLIST_FILE = profiTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +511,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,9 +527,10 @@
 				INFOPLIST_FILE = profiTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +540,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
