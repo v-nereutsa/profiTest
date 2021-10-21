@@ -11,17 +11,14 @@ final class GetFriendsVKNetworkCommand: VKNetworkCommand {
     
     private let userID: String
     private let queryFields = "photo_200_orig"
-    var API_PATH: String = "/method/friends.get"
+    var path: String = "/method/friends.get"
+    var additionalParams: [String: String] {
+        return ["fields": queryFields,
+                "user_id": userID]
+    }
     
     init(userID: String) {
         self.userID = userID
     }
-    
-    func getVKQuery() -> URLComponents {
-        var query = URLComponents()
-        query.path = API_PATH
-        query.queryItems = [URLQueryItem(name: "fields", value: queryFields),
-                            URLQueryItem(name: "user_id", value: userID)]
-        return query
-    }
+
 }

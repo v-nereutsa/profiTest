@@ -8,8 +8,8 @@
 import Foundation
 
 protocol NetworkCommand {
-    var API_SCHEME:  String { get }
-    var API_HOST:  String { get }
-    var API_PATH:  String { get }
-    func getQuery() -> URL?
+    var scheme:  String { get }
+    var host:  String { get }
+    var path:  String { get }
+    var params: [String: String] { get }
 }

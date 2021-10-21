@@ -8,34 +8,30 @@
 import Foundation
 
 protocol VKNetworkCommand: NetworkCommand {
-    var API_VERSION: String { get }
-    var API_LANGUAGE: String { get }
-    func getVKQuery() -> URLComponents
+    var additionalParams: [String: String] { get }
 }
 
 extension VKNetworkCommand {
-    var API_SCHEME: String {
-        return "https"
-    }
-    var API_HOST: String {
-        return "api.vk.com"
-    }
-    var API_VERSION: String {
+    private var apiVersion: String {
         return "5.131"
     }
-    var API_LANGUAGE: String {
+    private var apiLanguage: String {
         return "ru"
     }
-    func getQuery() -> URL? {
-        var query = getVKQuery()
-        query.scheme = API_SCHEME
-        query.host = API_HOST
     
-        query.queryItems?.append(contentsOf: [ URLQueryItem(name: "v", value: API_VERSION),
-                                               URLQueryItem(name: "lang", value: API_LANGUAGE),
-                                               URLQueryItem(name: "access_token", value: ACCESS_TOKEN) ])
-
-        return query.url
+    var scheme: String {
+        return "https"
     }
+    var host: String {
+        return "api.vk.com"
+    }
+
+    var params: [String: String] {
+        let vkParams = ["v": apiVersion,
+                        "lang": apiLanguage,
+                        "access_token": ACCESS_TOKEN]
+        return vkParams.merging(additionalParams) { (_ , new) in new }
+    }
+    
 }
 
