@@ -8,7 +8,11 @@
 import Foundation
 
 protocol VKNetworkCommand: NetworkCommand {
+    associatedtype T
+    
     var additionalParams: [String: String] { get }
+    
+    func decodeResponse(data: Data) -> Result<T, Error>
 }
 
 extension VKNetworkCommand {
