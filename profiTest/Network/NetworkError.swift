@@ -9,4 +9,5 @@ enum NetworkError: Error {
     case invalidResponseCode(responseCode: Int, errorDescription: String)
     case invalidData(errorDescription: String)
     case decodeResponseError(errorDescription: String)
+    case invalidRequestURL(errorDescription: String)
 }

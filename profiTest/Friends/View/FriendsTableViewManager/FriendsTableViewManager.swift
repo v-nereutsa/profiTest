@@ -12,7 +12,7 @@ final class FriendsTableViewManager: NSObject {
     weak private var listener: FriendsTableViewManagerListener!
     weak private var tableView: UITableView!
     
-    var dataset = [CellEntity]()
+    private var dataset = [CellEntity]()
 }
 
 extension FriendsTableViewManager: FriendsTableViewManagerInput {

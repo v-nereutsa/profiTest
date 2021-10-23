@@ -9,21 +9,22 @@ import Foundation
 import UIKit
 
 class FriendsRouter: FriendsRouterInput {
+    
     private weak var viewController: UIViewController!
     
     required init(viewControler: UIViewController) {
         self.viewController = viewControler
     }
     
-    func show(alert: AlertEntity) {
+    func showAlert(with data: AlertData) {
         DispatchQueue.main.async {
-            let alertController = UIAlertController(title: alert.title, message: alert.message, preferredStyle: .alert)
+            let alertController = UIAlertController(title: data.title, message: data.message, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.viewController.present(alertController, animated: true)
         }
     }
     
-    func show(loading: Bool, completion: (() -> Void)?) {
+    func showLoading(enable loading: Bool, completion: (() -> Void)?) {
         DispatchQueue.main.async {
             if loading {
                 let alert = UIAlertController(title: nil, message: "Loading...", preferredStyle: .alert)

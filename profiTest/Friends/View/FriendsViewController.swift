@@ -14,6 +14,7 @@ final class FriendsViewController: UIViewController {
     @IBOutlet weak var friendsTableView: UITableView!
     
     var presenter: FriendsPresenterInput!
+    
     private let configurator: FriendsConfiguratorInput = FriendsConfigurator()
     private let tableViewManager: FriendsTableViewManagerInput = FriendsTableViewManager()
     
@@ -31,6 +32,7 @@ final class FriendsViewController: UIViewController {
     
     private func setupViews() {
         searchTextField.placeholder = "User identifier"
+        searchTextField.text = "156156099"
     }
     
 }

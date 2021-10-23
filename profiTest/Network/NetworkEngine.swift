@@ -18,7 +18,11 @@ class NetworkEngine: NetworkClient {
         query.path = command.path
         query.queryItems = command.params.map{(key, value) in URLQueryItem(name: key, value: value)}
         
-        let url = query.url!
+        guard let url = query.url else {
+            completion(.failure(NetworkError.invalidRequestURL(errorDescription: "Invelid request URL")))
+            return
+        }
+        
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             if let response = response as? HTTPURLResponse, response.statusCode != 200 {
                 completion(.failure(NetworkError.invalidResponseCode(responseCode: response.statusCode, errorDescription: "Invalid response code")))

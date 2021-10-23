@@ -16,6 +16,7 @@ protocol VKNetworkCommand: NetworkCommand {
 }
 
 extension VKNetworkCommand {
+    
     private var apiVersion: String {
         return "5.131"
     }

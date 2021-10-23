@@ -1,11 +1,11 @@
 //
-//  AlertEntity.swift
+//  AlertData.swift
 //  profiTest
 //
 //  Created by Владимир Нереуца on 21.10.2021.
 //
 
-struct AlertEntity {
+struct AlertData {
     let title: String
     let message: String
 }

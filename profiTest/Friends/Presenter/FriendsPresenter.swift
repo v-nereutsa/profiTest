@@ -8,10 +8,14 @@
 import Foundation
 
 final class FriendsPresenter: FriendsPresenterInput {
+    
     private weak var view: FriendsViewControllerInput!
+    
     var interactor: FriendsInteractorInput!
+    
     private let router: FriendsRouterInput
-    private var dataset = [FriendViewItem]()
+    
+    private var dataset = [FriendCellItem]()
     
     required init(view: FriendsViewControllerInput, router: FriendsRouterInput) {
         self.view = view
@@ -19,19 +23,20 @@ final class FriendsPresenter: FriendsPresenterInput {
     }
     
     func onSearchClicked(userId: String?) {
-        if let userId = userId, userId != "", userId.isNumber {
+        if let userId = userId, Int(userId) != nil {
             view.dismissKeyboard()
-            router.show(loading: true, completion: nil)
+            router.showLoading(enable: true, completion: nil)
             interactor.loadFriends(for: userId)
         } else {
-            router.show(alert: AlertEntity(title: "Error", message: "Invalid user identifier"))
+            
+            router.showAlert(with: AlertData(title: "Error", message: "Invalid user identifier"))
         }
     }
     
     func didSelectRow(at indexPath: IndexPath) {
         let userId = String(dataset[indexPath.row].userID)
         view.updateTextFields(value: userId)
-        router.show(loading: true, completion: nil)
+        router.showLoading(enable: true, completion: nil)
         interactor.loadFriends(for: userId)
     }
 }
@@ -40,7 +45,7 @@ extension FriendsPresenter: FriendsInteractorOutput {
     
     func onFriendsRecevied(data: VKFriendsResponse) {
         dataset = mapData(data: data)
-        router.show(loading: false, completion: nil)
+        router.showLoading(enable: false, completion: nil)
         view.setTableData(data: dataset)
     }
     
@@ -50,33 +55,33 @@ extension FriendsPresenter: FriendsInteractorOutput {
         case is VKFriendsAPIError:
             let concreteError = error as! VKFriendsAPIError
             completion = {
-                self.router.show(alert: AlertEntity(title: String(concreteError.error.errorCode), message: concreteError.error.errorMessage))
+                self.router.showAlert(with: AlertData(title: String(concreteError.error.errorCode), message: concreteError.error.errorMessage))
             }
         case is NetworkError:
             let concreteError = error as! NetworkError
             switch concreteError {
             case .invalidResponseCode(let responseCode, let errorDescription):
                 completion = {
-                    self.router.show(alert: AlertEntity(title: String(responseCode), message: errorDescription))
+                    self.router.showAlert(with: AlertData(title: String(responseCode), message: errorDescription))
                 }
-            case .invalidData(let errorDescription), .decodeResponseError(let errorDescription):
+            case .invalidData(let errorDescription), .decodeResponseError(let errorDescription), .invalidRequestURL(let errorDescription):
                 completion = {
-                    self.router.show(alert: AlertEntity(title: "Error", message: errorDescription))
+                    self.router.showAlert(with: AlertData(title: "Error", message: errorDescription))
                 }
             }
         default:
             let concreteError = error as NSError
             completion = {
-                self.router.show(alert: AlertEntity(title: String(concreteError.code), message: concreteError.description))
+                self.router.showAlert(with: AlertData(title: String(concreteError.code), message: concreteError.description))
             }
         }
-        router.show(loading: false, completion: completion)
+        router.showLoading(enable: false, completion: completion)
     }
     
 }
 
 extension FriendsPresenter {
-    private func mapData(data: VKFriendsResponse) -> [FriendViewItem] {
-        return data.bundle.items.map { FriendViewItem(fullName: "\($0.firstName) \($0.lastName)", photoURL: $0.photoURL, userID: $0.userID) }
+    private func mapData(data: VKFriendsResponse) -> [FriendCellItem] {
+        return data.bundle.items.map { FriendCellItem(fullName: "\($0.firstName) \($0.lastName)", photoURL: $0.photoURL, userID: $0.userID) }
     }
 }

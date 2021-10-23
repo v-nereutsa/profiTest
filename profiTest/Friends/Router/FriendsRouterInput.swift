@@ -10,6 +10,6 @@ import UIKit
 
 protocol FriendsRouterInput: AnyObject {
     init(viewControler: UIViewController)
-    func show(alert: AlertEntity)
-    func show(loading: Bool, completion: (() -> Void)?)
+    func showAlert(with data: AlertData)
+    func showLoading(enable loading: Bool, completion: (() -> Void)?)
 }

@@ -16,7 +16,7 @@ class FriendTableViewCell: UITableViewCell {
 
 extension FriendTableViewCell: CommonTableViewCell {
     func configure(with value: CellEntity) {
-        let cellData = value as! FriendViewItem
+        let cellData = value as! FriendCellItem
         friendImageView.layer.cornerRadius = friendImageView.frame.size.width / 2
         friendImageView.image = nil
         friendImageView.downloadImage(from: URL(string: cellData.photoURL))

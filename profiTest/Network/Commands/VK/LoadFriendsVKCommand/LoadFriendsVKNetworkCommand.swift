@@ -11,10 +11,11 @@ final class LoadFriendsVKNetworkCommand: VKNetworkCommand {
     typealias T = VKFriendsResponse
     
     private let userID: String
-    private let queryFields = "photo_200_orig"
+    private let queryFields = ["photo_200_orig"]
+    
     var path: String = "/method/friends.get"
     var additionalParams: [String: String] {
-        return ["fields": queryFields,
+        return ["fields": queryFields.joined(separator: ","),
                 "user_id": userID]
     }
     

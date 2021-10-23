@@ -32,7 +32,7 @@
 		CB3AB075271FEEAA00507609 /* VKNetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3AB074271FEEAA00507609 /* VKNetworkCommand.swift */; };
 		CB3AB077271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3AB076271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift */; };
 		CB3AB079271FF1AB00507609 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3AB078271FF1AB00507609 /* Constants.swift */; };
-		CB5D7E452721D415004C43C2 /* AlertEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D7E442721D415004C43C2 /* AlertEntity.swift */; };
+		CB5D7E452721D415004C43C2 /* AlertData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D7E442721D415004C43C2 /* AlertData.swift */; };
 		CB88D6E9271F4E2E0054C608 /* NetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6E8271F4E2E0054C608 /* NetworkCommand.swift */; };
 		CB88D6EE271F50FE0054C608 /* FriendsTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6ED271F50FE0054C608 /* FriendsTableViewManager.swift */; };
 		CB88D6F0271F513E0054C608 /* FriendsTableViewManagerListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6EF271F513E0054C608 /* FriendsTableViewManagerListener.swift */; };
@@ -40,8 +40,7 @@
 		CBA97A3C2721EA0C001DD5EF /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA97A3B2721EA0C001DD5EF /* UIImageViewExtension.swift */; };
 		CBDCAB312724393E0041C31A /* VKFriendsAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCAB302724393E0041C31A /* VKFriendsAPIError.swift */; };
 		CBDCAB33272439560041C31A /* VKFriendsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCAB32272439560041C31A /* VKFriendsResponse.swift */; };
-		CBDCAB352724413D0041C31A /* FriendViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCAB342724413D0041C31A /* FriendViewItem.swift */; };
-		CBDCAB37272449B10041C31A /* StringProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCAB36272449B10041C31A /* StringProtocolExtension.swift */; };
+		CBDCAB352724413D0041C31A /* FriendCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCAB342724413D0041C31A /* FriendCellItem.swift */; };
 		CBDCAB3927244B390041C31A /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCAB3827244B390041C31A /* UITableViewExtension.swift */; };
 		CBFE19562724331F00F1FC90 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFE19552724331F00F1FC90 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
@@ -74,7 +73,7 @@
 		CB3AB074271FEEAA00507609 /* VKNetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKNetworkCommand.swift; sourceTree = "<group>"; };
 		CB3AB076271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFriendsVKNetworkCommand.swift; sourceTree = "<group>"; };
 		CB3AB078271FF1AB00507609 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		CB5D7E442721D415004C43C2 /* AlertEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertEntity.swift; sourceTree = "<group>"; };
+		CB5D7E442721D415004C43C2 /* AlertData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertData.swift; sourceTree = "<group>"; };
 		CB88D6E8271F4E2E0054C608 /* NetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCommand.swift; sourceTree = "<group>"; };
 		CB88D6ED271F50FE0054C608 /* FriendsTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManager.swift; sourceTree = "<group>"; };
 		CB88D6EF271F513E0054C608 /* FriendsTableViewManagerListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManagerListener.swift; sourceTree = "<group>"; };
@@ -82,8 +81,7 @@
 		CBA97A3B2721EA0C001DD5EF /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		CBDCAB302724393E0041C31A /* VKFriendsAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKFriendsAPIError.swift; sourceTree = "<group>"; };
 		CBDCAB32272439560041C31A /* VKFriendsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKFriendsResponse.swift; sourceTree = "<group>"; };
-		CBDCAB342724413D0041C31A /* FriendViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewItem.swift; sourceTree = "<group>"; };
-		CBDCAB36272449B10041C31A /* StringProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringProtocolExtension.swift; sourceTree = "<group>"; };
+		CBDCAB342724413D0041C31A /* FriendCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCellItem.swift; sourceTree = "<group>"; };
 		CBDCAB3827244B390041C31A /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		CBFE19552724331F00F1FC90 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -245,8 +243,8 @@
 			isa = PBXGroup;
 			children = (
 				CB1A1D5627209C2D00D27AC8 /* CellEntity.swift */,
-				CBDCAB342724413D0041C31A /* FriendViewItem.swift */,
-				CB5D7E442721D415004C43C2 /* AlertEntity.swift */,
+				CBDCAB342724413D0041C31A /* FriendCellItem.swift */,
+				CB5D7E442721D415004C43C2 /* AlertData.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -255,7 +253,6 @@
 			isa = PBXGroup;
 			children = (
 				CBA97A3B2721EA0C001DD5EF /* UIImageViewExtension.swift */,
-				CBDCAB36272449B10041C31A /* StringProtocolExtension.swift */,
 				CBDCAB3827244B390041C31A /* UITableViewExtension.swift */,
 			);
 			path = Extensions;
@@ -364,14 +361,14 @@
 				CBFE19562724331F00F1FC90 /* NetworkError.swift in Sources */,
 				CB1A1D532720832D00D27AC8 /* FriendsRouterInput.swift in Sources */,
 				CBDCAB312724393E0041C31A /* VKFriendsAPIError.swift in Sources */,
-				CB5D7E452721D415004C43C2 /* AlertEntity.swift in Sources */,
+				CB5D7E452721D415004C43C2 /* AlertData.swift in Sources */,
 				CBDCAB33272439560041C31A /* VKFriendsResponse.swift in Sources */,
 				CB360BDD271DF970002830F2 /* AppDelegate.swift in Sources */,
 				CB3AB075271FEEAA00507609 /* VKNetworkCommand.swift in Sources */,
 				CB1A1D552720865D00D27AC8 /* FriendsInteractorOutput.swift in Sources */,
 				CB360BDF271DF970002830F2 /* SceneDelegate.swift in Sources */,
 				CB3AB077271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift in Sources */,
-				CBDCAB352724413D0041C31A /* FriendViewItem.swift in Sources */,
+				CBDCAB352724413D0041C31A /* FriendCellItem.swift in Sources */,
 				CB360BFD271E017A002830F2 /* FriendsInteractorInput.swift in Sources */,
 				CB360BF9271E0155002830F2 /* FriendsPresenterInput.swift in Sources */,
 				CB1A1D5A27209C5F00D27AC8 /* CommonTableViewCell.swift in Sources */,
@@ -383,7 +380,6 @@
 				CB88D6F0271F513E0054C608 /* FriendsTableViewManagerListener.swift in Sources */,
 				CB1A1D5727209C2D00D27AC8 /* CellEntity.swift in Sources */,
 				CB360BFB271E016F002830F2 /* FriendsInteractor.swift in Sources */,
-				CBDCAB37272449B10041C31A /* StringProtocolExtension.swift in Sources */,
 				CB360BF7271E014B002830F2 /* FriendsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

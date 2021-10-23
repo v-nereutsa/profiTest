@@ -10,7 +10,8 @@ import Foundation
 final class FriendsInteractor: FriendsInteractorInput {
     
     private weak var presenter: FriendsInteractorOutput!
-    private weak var networkEngine: NetworkClient!
+    
+    private var networkEngine: NetworkClient!
     
     required init(presenter: FriendsInteractorOutput, networkEngine: NetworkClient) {
         self.presenter = presenter
