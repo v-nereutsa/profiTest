@@ -35,12 +35,16 @@ class FriendsRouter: FriendsRouterInput {
             activityIndicator.center = loadingView.center
             DispatchQueue.main.async {
                 loadingView.addSubview(activityIndicator)
-                self.viewController.view.addSubview(loadingView)
+                UIView.transition(with: self.viewController.view, duration: 0.25, options: [.transitionCrossDissolve], animations: {
+                    self.viewController.view.addSubview(loadingView)
+                }, completion: nil)
             }
             self.loadingView = loadingView
         } else {
             DispatchQueue.main.async {
-                self.loadingView?.removeFromSuperview()
+                UIView.transition(with: self.viewController.view, duration: 0.25, options: [.transitionCrossDissolve], animations: {
+                    self.loadingView?.removeFromSuperview()
+                }, completion: nil)
                 self.loadingView = nil
             }
         }
