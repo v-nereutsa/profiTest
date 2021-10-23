@@ -31,7 +31,6 @@
 		CB360C1A271E06B0002830F2 /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB360C18271E06B0002830F2 /* FriendsViewController.xib */; };
 		CB3AB075271FEEAA00507609 /* VKNetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3AB074271FEEAA00507609 /* VKNetworkCommand.swift */; };
 		CB3AB077271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3AB076271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift */; };
-		CB3AB079271FF1AB00507609 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3AB078271FF1AB00507609 /* Constants.swift */; };
 		CB5D7E452721D415004C43C2 /* AlertData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D7E442721D415004C43C2 /* AlertData.swift */; };
 		CB88D6E9271F4E2E0054C608 /* NetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6E8271F4E2E0054C608 /* NetworkCommand.swift */; };
 		CB88D6EE271F50FE0054C608 /* FriendsTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6ED271F50FE0054C608 /* FriendsTableViewManager.swift */; };
@@ -72,7 +71,6 @@
 		CB360C18271E06B0002830F2 /* FriendsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsViewController.xib; sourceTree = "<group>"; };
 		CB3AB074271FEEAA00507609 /* VKNetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKNetworkCommand.swift; sourceTree = "<group>"; };
 		CB3AB076271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFriendsVKNetworkCommand.swift; sourceTree = "<group>"; };
-		CB3AB078271FF1AB00507609 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CB5D7E442721D415004C43C2 /* AlertData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertData.swift; sourceTree = "<group>"; };
 		CB88D6E8271F4E2E0054C608 /* NetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCommand.swift; sourceTree = "<group>"; };
 		CB88D6ED271F50FE0054C608 /* FriendsTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManager.swift; sourceTree = "<group>"; };
@@ -83,6 +81,7 @@
 		CBDCAB32272439560041C31A /* VKFriendsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKFriendsResponse.swift; sourceTree = "<group>"; };
 		CBDCAB342724413D0041C31A /* FriendCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCellItem.swift; sourceTree = "<group>"; };
 		CBDCAB3827244B390041C31A /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		CBDCAB4E2724A5C30041C31A /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		CBFE19552724331F00F1FC90 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +150,7 @@
 				CB360BE5271DF971002830F2 /* Assets.xcassets */,
 				CB360BE7271DF971002830F2 /* LaunchScreen.storyboard */,
 				CB360BEA271DF971002830F2 /* Info.plist */,
+				CBDCAB4E2724A5C30041C31A /* Config.xcconfig */,
 			);
 			path = profiTest;
 			sourceTree = "<group>";
@@ -202,7 +202,6 @@
 				CB360C00271E01D2002830F2 /* NetworkClient.swift */,
 				CBFE19552724331F00F1FC90 /* NetworkError.swift */,
 				CB360C02271E01DB002830F2 /* NetworkEngine.swift */,
-				CB3AB078271FF1AB00507609 /* Constants.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -372,7 +371,6 @@
 				CB360BFD271E017A002830F2 /* FriendsInteractorInput.swift in Sources */,
 				CB360BF9271E0155002830F2 /* FriendsPresenterInput.swift in Sources */,
 				CB1A1D5A27209C5F00D27AC8 /* CommonTableViewCell.swift in Sources */,
-				CB3AB079271FF1AB00507609 /* Constants.swift in Sources */,
 				CB88D6F5271F52730054C608 /* FriendsTableViewManagerInput.swift in Sources */,
 				CB360C13271E0535002830F2 /* FriendTableViewCell.swift in Sources */,
 				CB360BF5271E0122002830F2 /* FriendsViewControllerInput.swift in Sources */,
@@ -400,6 +398,7 @@
 /* Begin XCBuildConfiguration section */
 		CB360BEB271DF971002830F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBDCAB4E2724A5C30041C31A /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -461,6 +460,7 @@
 		};
 		CB360BEC271DF971002830F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBDCAB4E2724A5C30041C31A /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -519,6 +519,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FRQ85N64G5;
@@ -537,6 +538,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nereutsa.profiTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -548,6 +550,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FRQ85N64G5;
@@ -566,6 +569,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nereutsa.profiTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
