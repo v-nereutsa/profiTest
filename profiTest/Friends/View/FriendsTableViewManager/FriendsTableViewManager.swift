@@ -31,12 +31,21 @@ extension FriendsTableViewManager: FriendsTableViewManagerInput {
     func setDataset(data: [CellEntity]) {
         self.dataset = data
         tableView.reloadData()
+        if tableView.numberOfRows(inSection: 0) != 0 {
+            tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+        }
     }
 }
 
 extension FriendsTableViewManager: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataset.count
+        let count =  dataset.count
+        if count == 0 {
+            tableView.setEmptyMessage("Friends list is empty")
+        } else {
+            tableView.restore()
+        }
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,6 +60,7 @@ extension FriendsTableViewManager: UITableViewDataSource {
 
 extension FriendsTableViewManager: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         listener.didSelectRow(at: indexPath)
     }
 }
