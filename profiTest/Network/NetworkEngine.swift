@@ -21,7 +21,7 @@ class NetworkEngine: NetworkClient {
         let url = query.url!
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             if let response = response as? HTTPURLResponse, response.statusCode != 200 {
-                completion(.failure(NetworkError.invalidResponseCode(responseCode: response.statusCode, errorDescription: "Invalid response code.")))
+                completion(.failure(NetworkError.invalidResponseCode(responseCode: response.statusCode, errorDescription: "Invalid response code")))
                 return
             }
             if let error = error {
@@ -29,7 +29,7 @@ class NetworkEngine: NetworkClient {
                 return
             }
             guard let data = data else {
-                completion(.failure(NetworkError.invalidData(errorDescription: "Invalid data.")))
+                completion(.failure(NetworkError.invalidData(errorDescription: "Invalid data")))
                 return
             }
             completion(.success(data))
