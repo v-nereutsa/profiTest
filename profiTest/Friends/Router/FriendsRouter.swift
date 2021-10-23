@@ -12,6 +12,8 @@ class FriendsRouter: FriendsRouterInput {
     
     private weak var viewController: UIViewController!
     
+    private var loadingView: UIView?
+    
     required init(viewControler: UIViewController) {
         self.viewController = viewControler
     }
@@ -24,21 +26,22 @@ class FriendsRouter: FriendsRouterInput {
         }
     }
     
-    func showLoading(enable loading: Bool, completion: (() -> Void)?) {
-        DispatchQueue.main.async {
-            if loading {
-                let alert = UIAlertController(title: nil, message: "Loading...", preferredStyle: .alert)
-
-                let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
-                loadingIndicator.hidesWhenStopped = true
-                loadingIndicator.style = UIActivityIndicatorView.Style.gray
-                loadingIndicator.startAnimating();
-                
-                alert.view.addSubview(loadingIndicator)
-                
-                self.viewController.present(alert, animated: true, completion: completion)
-            } else {
-                self.viewController.dismiss(animated: true, completion: completion)
+    func showLoading(enable loading: Bool) {
+        if loading {
+            let loadingView = UIView.init(frame: viewController.view.bounds)
+            loadingView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+            let activityIndicator = UIActivityIndicatorView.init(style: .whiteLarge)
+            activityIndicator.startAnimating()
+            activityIndicator.center = loadingView.center
+            DispatchQueue.main.async {
+                loadingView.addSubview(activityIndicator)
+                self.viewController.view.addSubview(loadingView)
+            }
+            self.loadingView = loadingView
+        } else {
+            DispatchQueue.main.async {
+                self.loadingView?.removeFromSuperview()
+                self.loadingView = nil
             }
         }
     }
