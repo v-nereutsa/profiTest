@@ -23,4 +23,23 @@ class FriendsRouter: FriendsRouterInput {
         }
     }
     
+    func show(loading: Bool, completion: (() -> Void)?) {
+        DispatchQueue.main.async {
+            if loading {
+                let alert = UIAlertController(title: nil, message: "Loading...", preferredStyle: .alert)
+
+                let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+                loadingIndicator.hidesWhenStopped = true
+                loadingIndicator.style = UIActivityIndicatorView.Style.gray
+                loadingIndicator.startAnimating();
+                
+                alert.view.addSubview(loadingIndicator)
+                
+                self.viewController.present(alert, animated: true, completion: completion)
+            } else {
+                self.viewController.dismiss(animated: true, completion: completion)
+            }
+        }
+    }
+    
 }
