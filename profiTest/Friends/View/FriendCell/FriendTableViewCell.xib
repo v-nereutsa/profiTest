@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VT6-I1-xzL">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VT6-I1-xzL">
                         <rect key="frame" x="16" y="8" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="83m-m8-b5R"/>
@@ -35,9 +35,9 @@
                     <constraint firstItem="VT6-I1-xzL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="8Yr-4f-gCK"/>
                     <constraint firstAttribute="trailing" secondItem="qza-SE-OBV" secondAttribute="trailing" constant="16" id="K2L-On-Ywu"/>
                     <constraint firstItem="qza-SE-OBV" firstAttribute="leading" secondItem="VT6-I1-xzL" secondAttribute="trailing" constant="8" id="NnD-QI-SIr"/>
-                    <constraint firstAttribute="bottom" secondItem="VT6-I1-xzL" secondAttribute="bottom" constant="8" id="cLg-ur-ph4"/>
+                    <constraint firstAttribute="bottom" secondItem="VT6-I1-xzL" secondAttribute="bottom" priority="999" constant="8" id="cLg-ur-ph4"/>
                     <constraint firstItem="qza-SE-OBV" firstAttribute="centerY" secondItem="VT6-I1-xzL" secondAttribute="centerY" id="gef-mU-TJc"/>
-                    <constraint firstItem="VT6-I1-xzL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="wru-x2-sRo"/>
+                    <constraint firstItem="VT6-I1-xzL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" priority="999" constant="8" id="wru-x2-sRo"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

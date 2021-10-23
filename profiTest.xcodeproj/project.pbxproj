@@ -14,7 +14,6 @@
 		CB1A1D552720865D00D27AC8 /* FriendsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A1D542720865D00D27AC8 /* FriendsInteractorOutput.swift */; };
 		CB1A1D5727209C2D00D27AC8 /* CellEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A1D5627209C2D00D27AC8 /* CellEntity.swift */; };
 		CB1A1D5A27209C5F00D27AC8 /* CommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A1D5927209C5F00D27AC8 /* CommonTableViewCell.swift */; };
-		CB1A1D5C2720AE4700D27AC8 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A1D5B2720AE4700D27AC8 /* Response.swift */; };
 		CB360BDD271DF970002830F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360BDC271DF970002830F2 /* AppDelegate.swift */; };
 		CB360BDF271DF970002830F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360BDE271DF970002830F2 /* SceneDelegate.swift */; };
 		CB360BE6271DF971002830F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB360BE5271DF971002830F2 /* Assets.xcassets */; };
@@ -24,24 +23,27 @@
 		CB360BF9271E0155002830F2 /* FriendsPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360BF8271E0155002830F2 /* FriendsPresenterInput.swift */; };
 		CB360BFB271E016F002830F2 /* FriendsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360BFA271E016F002830F2 /* FriendsInteractor.swift */; };
 		CB360BFD271E017A002830F2 /* FriendsInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360BFC271E017A002830F2 /* FriendsInteractorInput.swift */; };
-		CB360BFF271E01C6002830F2 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360BFE271E01C6002830F2 /* Repository.swift */; };
 		CB360C01271E01D2002830F2 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360C00271E01D2002830F2 /* NetworkClient.swift */; };
 		CB360C03271E01DB002830F2 /* NetworkEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360C02271E01DB002830F2 /* NetworkEngine.swift */; };
-		CB360C09271E0226002830F2 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360C08271E0226002830F2 /* BaseRepository.swift */; };
 		CB360C13271E0535002830F2 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360C11271E0535002830F2 /* FriendTableViewCell.swift */; };
 		CB360C14271E0535002830F2 /* FriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB360C12271E0535002830F2 /* FriendTableViewCell.xib */; };
 		CB360C19271E06B0002830F2 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB360C17271E06B0002830F2 /* FriendsViewController.swift */; };
 		CB360C1A271E06B0002830F2 /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB360C18271E06B0002830F2 /* FriendsViewController.xib */; };
 		CB3AB075271FEEAA00507609 /* VKNetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3AB074271FEEAA00507609 /* VKNetworkCommand.swift */; };
-		CB3AB077271FEEBD00507609 /* GetFriendsVKNetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3AB076271FEEBD00507609 /* GetFriendsVKNetworkCommand.swift */; };
+		CB3AB077271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3AB076271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift */; };
 		CB3AB079271FF1AB00507609 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3AB078271FF1AB00507609 /* Constants.swift */; };
 		CB5D7E452721D415004C43C2 /* AlertEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D7E442721D415004C43C2 /* AlertEntity.swift */; };
 		CB88D6E9271F4E2E0054C608 /* NetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6E8271F4E2E0054C608 /* NetworkCommand.swift */; };
 		CB88D6EE271F50FE0054C608 /* FriendsTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6ED271F50FE0054C608 /* FriendsTableViewManager.swift */; };
 		CB88D6F0271F513E0054C608 /* FriendsTableViewManagerListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6EF271F513E0054C608 /* FriendsTableViewManagerListener.swift */; };
-		CB88D6F3271F51850054C608 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6F2271F51850054C608 /* Friend.swift */; };
 		CB88D6F5271F52730054C608 /* FriendsTableViewManagerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6F4271F52730054C608 /* FriendsTableViewManagerInput.swift */; };
 		CBA97A3C2721EA0C001DD5EF /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA97A3B2721EA0C001DD5EF /* UIImageViewExtension.swift */; };
+		CBDCAB312724393E0041C31A /* VKFriendsAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCAB302724393E0041C31A /* VKFriendsAPIError.swift */; };
+		CBDCAB33272439560041C31A /* VKFriendsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCAB32272439560041C31A /* VKFriendsResponse.swift */; };
+		CBDCAB352724413D0041C31A /* FriendViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCAB342724413D0041C31A /* FriendViewItem.swift */; };
+		CBDCAB37272449B10041C31A /* StringProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCAB36272449B10041C31A /* StringProtocolExtension.swift */; };
+		CBDCAB3927244B390041C31A /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCAB3827244B390041C31A /* UITableViewExtension.swift */; };
+		CBFE19562724331F00F1FC90 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFE19552724331F00F1FC90 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +54,6 @@
 		CB1A1D542720865D00D27AC8 /* FriendsInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsInteractorOutput.swift; sourceTree = "<group>"; };
 		CB1A1D5627209C2D00D27AC8 /* CellEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellEntity.swift; sourceTree = "<group>"; };
 		CB1A1D5927209C5F00D27AC8 /* CommonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTableViewCell.swift; sourceTree = "<group>"; };
-		CB1A1D5B2720AE4700D27AC8 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		CB360BD9271DF970002830F2 /* profiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = profiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB360BDC271DF970002830F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB360BDE271DF970002830F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,24 +65,27 @@
 		CB360BF8271E0155002830F2 /* FriendsPresenterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPresenterInput.swift; sourceTree = "<group>"; };
 		CB360BFA271E016F002830F2 /* FriendsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsInteractor.swift; sourceTree = "<group>"; };
 		CB360BFC271E017A002830F2 /* FriendsInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsInteractorInput.swift; sourceTree = "<group>"; };
-		CB360BFE271E01C6002830F2 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		CB360C00271E01D2002830F2 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		CB360C02271E01DB002830F2 /* NetworkEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEngine.swift; sourceTree = "<group>"; };
-		CB360C08271E0226002830F2 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
 		CB360C11271E0535002830F2 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		CB360C12271E0535002830F2 /* FriendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendTableViewCell.xib; sourceTree = "<group>"; };
 		CB360C17271E06B0002830F2 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		CB360C18271E06B0002830F2 /* FriendsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsViewController.xib; sourceTree = "<group>"; };
 		CB3AB074271FEEAA00507609 /* VKNetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKNetworkCommand.swift; sourceTree = "<group>"; };
-		CB3AB076271FEEBD00507609 /* GetFriendsVKNetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFriendsVKNetworkCommand.swift; sourceTree = "<group>"; };
+		CB3AB076271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFriendsVKNetworkCommand.swift; sourceTree = "<group>"; };
 		CB3AB078271FF1AB00507609 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CB5D7E442721D415004C43C2 /* AlertEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertEntity.swift; sourceTree = "<group>"; };
 		CB88D6E8271F4E2E0054C608 /* NetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCommand.swift; sourceTree = "<group>"; };
 		CB88D6ED271F50FE0054C608 /* FriendsTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManager.swift; sourceTree = "<group>"; };
 		CB88D6EF271F513E0054C608 /* FriendsTableViewManagerListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManagerListener.swift; sourceTree = "<group>"; };
-		CB88D6F2271F51850054C608 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		CB88D6F4271F52730054C608 /* FriendsTableViewManagerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManagerInput.swift; sourceTree = "<group>"; };
 		CBA97A3B2721EA0C001DD5EF /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		CBDCAB302724393E0041C31A /* VKFriendsAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKFriendsAPIError.swift; sourceTree = "<group>"; };
+		CBDCAB32272439560041C31A /* VKFriendsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKFriendsResponse.swift; sourceTree = "<group>"; };
+		CBDCAB342724413D0041C31A /* FriendViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewItem.swift; sourceTree = "<group>"; };
+		CBDCAB36272449B10041C31A /* StringProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringProtocolExtension.swift; sourceTree = "<group>"; };
+		CBDCAB3827244B390041C31A /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		CBFE19552724331F00F1FC90 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,11 +146,10 @@
 		CB360BDB271DF970002830F2 /* profiTest */ = {
 			isa = PBXGroup;
 			children = (
-				CBA97A3A2721E9FB001DD5EF /* Extensions */,
 				CB360C0B271E026A002830F2 /* Common */,
 				CB360C10271E031C002830F2 /* Friends */,
-				CB360C0E271E0308002830F2 /* Repository */,
 				CB360C0F271E0312002830F2 /* Network */,
+				CBA97A3A2721E9FB001DD5EF /* Extensions */,
 				CB360BE5271DF971002830F2 /* Assets.xcassets */,
 				CB360BE7271DF971002830F2 /* LaunchScreen.storyboard */,
 				CB360BEA271DF971002830F2 /* Info.plist */,
@@ -194,23 +197,14 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		CB360C0E271E0308002830F2 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				CB360BFE271E01C6002830F2 /* Repository.swift */,
-				CB360C08271E0226002830F2 /* BaseRepository.swift */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
 		CB360C0F271E0312002830F2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				CB88D6E7271F4DF30054C608 /* Commands */,
 				CB360C00271E01D2002830F2 /* NetworkClient.swift */,
+				CBFE19552724331F00F1FC90 /* NetworkError.swift */,
 				CB360C02271E01DB002830F2 /* NetworkEngine.swift */,
 				CB3AB078271FF1AB00507609 /* Constants.swift */,
-				CB1A1D5B2720AE4700D27AC8 /* Response.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -232,8 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				CB88D6E8271F4E2E0054C608 /* NetworkCommand.swift */,
-				CB3AB074271FEEAA00507609 /* VKNetworkCommand.swift */,
-				CB3AB076271FEEBD00507609 /* GetFriendsVKNetworkCommand.swift */,
+				CBFE19572724353800F1FC90 /* VK */,
 			);
 			path = Commands;
 			sourceTree = "<group>";
@@ -251,8 +244,8 @@
 		CB88D6F1271F51790054C608 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				CB88D6F2271F51850054C608 /* Friend.swift */,
 				CB1A1D5627209C2D00D27AC8 /* CellEntity.swift */,
+				CBDCAB342724413D0041C31A /* FriendViewItem.swift */,
 				CB5D7E442721D415004C43C2 /* AlertEntity.swift */,
 			);
 			path = Entity;
@@ -262,8 +255,29 @@
 			isa = PBXGroup;
 			children = (
 				CBA97A3B2721EA0C001DD5EF /* UIImageViewExtension.swift */,
+				CBDCAB36272449B10041C31A /* StringProtocolExtension.swift */,
+				CBDCAB3827244B390041C31A /* UITableViewExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CBFE19572724353800F1FC90 /* VK */ = {
+			isa = PBXGroup;
+			children = (
+				CB3AB074271FEEAA00507609 /* VKNetworkCommand.swift */,
+				CBFE19582724353C00F1FC90 /* LoadFriendsVKCommand */,
+			);
+			path = VK;
+			sourceTree = "<group>";
+		};
+		CBFE19582724353C00F1FC90 /* LoadFriendsVKCommand */ = {
+			isa = PBXGroup;
+			children = (
+				CB3AB076271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift */,
+				CBDCAB32272439560041C31A /* VKFriendsResponse.swift */,
+				CBDCAB302724393E0041C31A /* VKFriendsAPIError.swift */,
+			);
+			path = LoadFriendsVKCommand;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,28 +361,30 @@
 				CB88D6E9271F4E2E0054C608 /* NetworkCommand.swift in Sources */,
 				CB1A1D4C2720803500D27AC8 /* FriendsConfigurator.swift in Sources */,
 				CB360C19271E06B0002830F2 /* FriendsViewController.swift in Sources */,
+				CBFE19562724331F00F1FC90 /* NetworkError.swift in Sources */,
 				CB1A1D532720832D00D27AC8 /* FriendsRouterInput.swift in Sources */,
+				CBDCAB312724393E0041C31A /* VKFriendsAPIError.swift in Sources */,
 				CB5D7E452721D415004C43C2 /* AlertEntity.swift in Sources */,
+				CBDCAB33272439560041C31A /* VKFriendsResponse.swift in Sources */,
 				CB360BDD271DF970002830F2 /* AppDelegate.swift in Sources */,
 				CB3AB075271FEEAA00507609 /* VKNetworkCommand.swift in Sources */,
 				CB1A1D552720865D00D27AC8 /* FriendsInteractorOutput.swift in Sources */,
 				CB360BDF271DF970002830F2 /* SceneDelegate.swift in Sources */,
-				CB3AB077271FEEBD00507609 /* GetFriendsVKNetworkCommand.swift in Sources */,
+				CB3AB077271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift in Sources */,
+				CBDCAB352724413D0041C31A /* FriendViewItem.swift in Sources */,
 				CB360BFD271E017A002830F2 /* FriendsInteractorInput.swift in Sources */,
 				CB360BF9271E0155002830F2 /* FriendsPresenterInput.swift in Sources */,
 				CB1A1D5A27209C5F00D27AC8 /* CommonTableViewCell.swift in Sources */,
 				CB3AB079271FF1AB00507609 /* Constants.swift in Sources */,
 				CB88D6F5271F52730054C608 /* FriendsTableViewManagerInput.swift in Sources */,
-				CB1A1D5C2720AE4700D27AC8 /* Response.swift in Sources */,
 				CB360C13271E0535002830F2 /* FriendTableViewCell.swift in Sources */,
 				CB360BF5271E0122002830F2 /* FriendsViewControllerInput.swift in Sources */,
+				CBDCAB3927244B390041C31A /* UITableViewExtension.swift in Sources */,
 				CB88D6F0271F513E0054C608 /* FriendsTableViewManagerListener.swift in Sources */,
 				CB1A1D5727209C2D00D27AC8 /* CellEntity.swift in Sources */,
 				CB360BFB271E016F002830F2 /* FriendsInteractor.swift in Sources */,
+				CBDCAB37272449B10041C31A /* StringProtocolExtension.swift in Sources */,
 				CB360BF7271E014B002830F2 /* FriendsPresenter.swift in Sources */,
-				CB88D6F3271F51850054C608 /* Friend.swift in Sources */,
-				CB360C09271E0226002830F2 /* BaseRepository.swift in Sources */,
-				CB360BFF271E01C6002830F2 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

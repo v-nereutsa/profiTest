@@ -8,6 +8,7 @@
 import Foundation
 
 protocol FriendsViewControllerInput: AnyObject {
-    func setTableData(data: [Friend])
+    func setTableData(data: [CellEntity])
     func updateTextFields(value: String)
+    func dismissKeyboard()
 }

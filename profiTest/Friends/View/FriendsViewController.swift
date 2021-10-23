@@ -22,10 +22,15 @@ final class FriendsViewController: UIViewController {
         configurator.configure(with: self)
         tableViewManager.subcribe(listener: self)
         tableViewManager.setTableView(tableView: friendsTableView)
+        setupViews()
     }
     
     @IBAction func onSearchClicked(_ sender: Any) {
         presenter.onSearchClicked(userId: searchTextField.text)
+    }
+    
+    private func setupViews() {
+        searchTextField.placeholder = "User identifier"
     }
     
 }
@@ -35,11 +40,14 @@ extension FriendsViewController: FriendsViewControllerInput {
         searchTextField.text = value
     }
     
-    func setTableData(data: [Friend]) {
-        DispatchQueue.main.async { [weak self] in
-            print(data)
-            self?.tableViewManager.setDataset(data: data)
+    func setTableData(data: [CellEntity]) {
+        DispatchQueue.main.async {
+            self.tableViewManager.setDataset(data: data)
         }
+    }
+    
+    func dismissKeyboard() {
+        searchTextField.resignFirstResponder()
     }
 }
 
