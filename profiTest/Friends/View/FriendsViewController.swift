@@ -38,8 +38,10 @@ final class FriendsViewController: UIViewController {
 }
 
 extension FriendsViewController: FriendsViewControllerInput {
-    func updateTextFields(value: String) {
-        searchTextField.text = value
+    func updateUserIdentifier(value: String) {
+        DispatchQueue.main.async {
+            self.searchTextField.text = value
+        }
     }
     
     func setTableData(data: [CellEntity]) {

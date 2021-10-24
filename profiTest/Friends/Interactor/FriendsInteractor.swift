@@ -11,22 +11,22 @@ final class FriendsInteractor: FriendsInteractorInput {
     
     private weak var presenter: FriendsInteractorOutput!
     
-    private var networkEngine: NetworkClient!
+    private var networkClient: NetworkClient!
     
-    required init(presenter: FriendsInteractorOutput, networkEngine: NetworkClient) {
+    required init(presenter: FriendsInteractorOutput, networkClient: NetworkClient) {
         self.presenter = presenter
-        self.networkEngine = networkEngine
+        self.networkClient = networkClient
     }
     
     func loadFriends(for user: String) {
         let command = LoadFriendsVKNetworkCommand(userID: user)
-        networkEngine.execute(command: command, completion: { (value) in
+        networkClient.execute(command: command, completion: { (value) in
             switch value {
             case .success(let response):
                 let decodedData = command.decodeResponse(data: response)
                 switch decodedData {
                 case .success(let friendsBundle):
-                    self.presenter.onFriendsRecevied(data: friendsBundle)
+                    self.presenter.onFriendsRecevied(data: friendsBundle, userId: user)
                 case .failure(let error):
                     self.presenter.onErrorReceived(error: error)
                 }

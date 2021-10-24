@@ -8,6 +8,6 @@
 import Foundation
 
 protocol FriendsInteractorOutput: AnyObject {
-    func onFriendsRecevied(data: VKFriendsResponse)
+    func onFriendsRecevied(data: VKFriendsResponse, userId: String)
     func onErrorReceived(error: Error)
 }

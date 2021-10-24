@@ -15,6 +15,7 @@ final class FriendsPresenter: FriendsPresenterInput {
     
     private let router: FriendsRouterInput
     
+    private var currentUserIdentifier: String?
     private var dataset = [FriendCellItem]()
     
     required init(view: FriendsViewControllerInput, router: FriendsRouterInput) {
@@ -27,15 +28,16 @@ final class FriendsPresenter: FriendsPresenterInput {
             view.dismissKeyboard()
             router.showLoading(enable: true)
             interactor.loadFriends(for: userId)
+            if currentUserIdentifier == nil {
+                currentUserIdentifier = userId
+            }
         } else {
-            
             router.showAlert(with: AlertData(title: "Error", message: "Invalid user identifier"))
         }
     }
     
     func didSelectRow(at indexPath: IndexPath) {
-        let userId = String(dataset[indexPath.row].userID)
-        view.updateTextFields(value: userId)
+        let userId = "\(dataset[indexPath.row].userID)"
         router.showLoading(enable: true)
         interactor.loadFriends(for: userId)
     }
@@ -43,10 +45,12 @@ final class FriendsPresenter: FriendsPresenterInput {
 
 extension FriendsPresenter: FriendsInteractorOutput {
     
-    func onFriendsRecevied(data: VKFriendsResponse) {
+    func onFriendsRecevied(data: VKFriendsResponse, userId: String) {
         dataset = mapData(data: data)
+        currentUserIdentifier = userId
         router.showLoading(enable: false)
         view.setTableData(data: dataset)
+        view.updateUserIdentifier(value: userId)
     }
     
     func onErrorReceived(error: Error) {
@@ -59,13 +63,13 @@ extension FriendsPresenter: FriendsInteractorOutput {
             let concreteError = error as! NetworkError
             switch concreteError {
             case .invalidResponseCode(let responseCode, let errorDescription):
-                router.showAlert(with: AlertData(title: String(responseCode), message: errorDescription))
+                router.showAlert(with: AlertData(title: "Error \(responseCode)", message: errorDescription))
             case .invalidData(let errorDescription), .decodeResponseError(let errorDescription), .invalidRequestURL(let errorDescription):
                 router.showAlert(with: AlertData(title: "Error", message: errorDescription))
             }
         default:
             let concreteError = error as NSError
-            router.showAlert(with: AlertData(title: String(concreteError.code), message: concreteError.description))
+            router.showAlert(with: AlertData(title: "Error \(concreteError.code)", message: concreteError.description))
         }
         
     }

@@ -34,7 +34,7 @@ extension VKNetworkCommand {
     var params: [String: String] {
         let vkParams = ["v": apiVersion,
                         "lang": apiLanguage,
-                        "access_token": Bundle.main.infoDictionary?["ACCESS_TOKEN"] as? String]
+                        "access_token": Bundle.main.infoDictionary?["VK_ACCESS_TOKEN"] as? String]
         return vkParams.compactMapValues{$0}.merging(additionalParams) { (_ , new) in new }
     }
     

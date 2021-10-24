@@ -12,8 +12,8 @@ final class FriendsConfigurator: FriendsConfiguratorInput {
     func configure(with viewController: FriendsViewController) {
         let router = FriendsRouter(viewControler: viewController)
         let presenter = FriendsPresenter(view: viewController, router: router)
-        let networkEngine = NetworkEngine.shared
-        let interactor = FriendsInteractor(presenter: presenter, networkEngine: networkEngine)
+        let networkClient = NetworkEngine.shared
+        let interactor = FriendsInteractor(presenter: presenter, networkClient: networkClient)
         
         viewController.presenter = presenter
         presenter.interactor = interactor
