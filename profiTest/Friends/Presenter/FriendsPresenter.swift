@@ -15,7 +15,6 @@ final class FriendsPresenter: FriendsPresenterInput {
     
     private let router: FriendsRouterInput
     
-    private var currentUserIdentifier: String?
     private var dataset = [FriendCellItem]()
     
     required init(view: FriendsViewControllerInput, router: FriendsRouterInput) {
@@ -28,9 +27,6 @@ final class FriendsPresenter: FriendsPresenterInput {
             view.dismissKeyboard()
             router.showLoading(enable: true)
             interactor.loadFriends(for: userId)
-            if currentUserIdentifier == nil {
-                currentUserIdentifier = userId
-            }
         } else {
             router.showAlert(with: AlertData(title: "Error", message: "Invalid user identifier"))
         }
@@ -47,7 +43,6 @@ extension FriendsPresenter: FriendsInteractorOutput {
     
     func onFriendsRecevied(data: VKFriendsResponse, userId: String) {
         dataset = mapData(data: data)
-        currentUserIdentifier = userId
         router.showLoading(enable: false)
         view.setTableData(data: dataset)
         view.updateUserIdentifier(value: userId)
