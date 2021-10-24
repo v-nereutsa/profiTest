@@ -1,4 +1,4 @@
-# testReadmeProfi
+# profiTest
 
 Тестовое задание для PROFI.<br>
 
@@ -32,4 +32,4 @@
 Для удобства добавлено значение id по умолчанию.<br>
 
 Работа приложения:<br>
-![Alt Text](https://github.com/v-nereutsa/testReadmeProfi/blob/main/app.gif)
+![Alt Text](https://github.com/v-nereutsa/profiTest/blob/main/app.gif)
