@@ -39,15 +39,11 @@ final class FriendsViewController: UIViewController {
 
 extension FriendsViewController: FriendsViewControllerInput {
     func updateUserIdentifier(value: String) {
-        DispatchQueue.main.async {
-            self.searchTextField.text = value
-        }
+        self.searchTextField.text = value
     }
     
     func setTableData(data: [CellEntity]) {
-        DispatchQueue.main.async {
-            self.tableViewManager.setDataset(data: data)
-        }
+        self.tableViewManager.setDataset(data: data)
     }
     
     func dismissKeyboard() {
