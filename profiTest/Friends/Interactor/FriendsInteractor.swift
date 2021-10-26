@@ -20,19 +20,23 @@ final class FriendsInteractor: FriendsInteractorInput {
     
     func loadFriends(for user: String) {
         let command = LoadFriendsVKNetworkCommand(userID: user)
-        networkClient.execute(command: command, completion: { (value) in
+        networkClient.execute(command: command, completion: { [weak self] (value) in
             switch value {
-            case .success(let response):
-                let decodedData = command.decodeResponse(data: response)
-                switch decodedData {
-                case .success(let friendsBundle):
-                    self.presenter.onFriendsRecevied(data: friendsBundle, userId: user)
+                case .success(let response):
+                    let decodedData = command.decodeResponse(data: response)
+                    DispatchQueue.main.async {
+                        switch decodedData {
+                        case .success(let friendsBundle):
+                            self?.presenter.onFriendsRecevied(data: friendsBundle, userId: user)
+                        case .failure(let error):
+                            self?.presenter.onErrorReceived(error: error)
+                        }
+                    }
                 case .failure(let error):
-                    self.presenter.onErrorReceived(error: error)
+                    DispatchQueue.main.async {
+                        self?.presenter.onErrorReceived(error: error)
+                    }
                 }
-            case .failure(let error):
-                self.presenter.onErrorReceived(error: error)
-            }
         })
     }
     
