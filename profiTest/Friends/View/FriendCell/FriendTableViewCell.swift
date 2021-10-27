@@ -12,12 +12,17 @@ class FriendTableViewCell: UITableViewCell {
     @IBOutlet weak var friendName: UILabel!
     @IBOutlet weak var friendImageView: UIImageView!
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        friendImageView.layer.cornerRadius = friendImageView.frame.size.width / 2
+    }
+    
 }
 
 extension FriendTableViewCell: CommonTableViewCell {
     func configure(with value: CellEntity) {
         let cellData = value as! FriendCellItem
-        friendImageView.layer.cornerRadius = friendImageView.frame.size.width / 2
+
         friendImageView.image = nil
         friendImageView.downloadImage(from: URL(string: cellData.photoURL))
         friendName.text = cellData.fullName

@@ -37,6 +37,13 @@
 		CB88D6F0271F513E0054C608 /* FriendsTableViewManagerListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6EF271F513E0054C608 /* FriendsTableViewManagerListener.swift */; };
 		CB88D6F5271F52730054C608 /* FriendsTableViewManagerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6F4271F52730054C608 /* FriendsTableViewManagerInput.swift */; };
 		CBA97A3C2721EA0C001DD5EF /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA97A3B2721EA0C001DD5EF /* UIImageViewExtension.swift */; };
+		CBD20334272892F800CBB18E /* LoadFriendsVKDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD20333272892F800CBB18E /* LoadFriendsVKDecoder.swift */; };
+		CBD203362728938400CBB18E /* DecoderInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD203352728938400CBB18E /* DecoderInput.swift */; };
+		CBD2033F272918FF00CBB18E /* FriendsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD2033E272918FE00CBB18E /* FriendsTableViewDataSource.swift */; };
+		CBD203412729191000CBB18E /* FriendsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD203402729191000CBB18E /* FriendsTableViewDelegate.swift */; };
+		CBD203432729191A00CBB18E /* FriendsTableViewDelegateInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD203422729191A00CBB18E /* FriendsTableViewDelegateInput.swift */; };
+		CBD203452729192300CBB18E /* FriendsTableViewDelegateListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD203442729192200CBB18E /* FriendsTableViewDelegateListener.swift */; };
+		CBD203472729192F00CBB18E /* FriendsTableViewDataSourceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD203462729192F00CBB18E /* FriendsTableViewDataSourceInput.swift */; };
 		CBDCAB312724393E0041C31A /* VKFriendsAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCAB302724393E0041C31A /* VKFriendsAPIError.swift */; };
 		CBDCAB33272439560041C31A /* VKFriendsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCAB32272439560041C31A /* VKFriendsResponse.swift */; };
 		CBDCAB352724413D0041C31A /* FriendCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCAB342724413D0041C31A /* FriendCellItem.swift */; };
@@ -77,6 +84,13 @@
 		CB88D6EF271F513E0054C608 /* FriendsTableViewManagerListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManagerListener.swift; sourceTree = "<group>"; };
 		CB88D6F4271F52730054C608 /* FriendsTableViewManagerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManagerInput.swift; sourceTree = "<group>"; };
 		CBA97A3B2721EA0C001DD5EF /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		CBD20333272892F800CBB18E /* LoadFriendsVKDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFriendsVKDecoder.swift; sourceTree = "<group>"; };
+		CBD203352728938400CBB18E /* DecoderInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderInput.swift; sourceTree = "<group>"; };
+		CBD2033E272918FE00CBB18E /* FriendsTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewDataSource.swift; sourceTree = "<group>"; };
+		CBD203402729191000CBB18E /* FriendsTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewDelegate.swift; sourceTree = "<group>"; };
+		CBD203422729191A00CBB18E /* FriendsTableViewDelegateInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewDelegateInput.swift; sourceTree = "<group>"; };
+		CBD203442729192200CBB18E /* FriendsTableViewDelegateListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewDelegateListener.swift; sourceTree = "<group>"; };
+		CBD203462729192F00CBB18E /* FriendsTableViewDataSourceInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewDataSourceInput.swift; sourceTree = "<group>"; };
 		CBDCAB302724393E0041C31A /* VKFriendsAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKFriendsAPIError.swift; sourceTree = "<group>"; };
 		CBDCAB32272439560041C31A /* VKFriendsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKFriendsResponse.swift; sourceTree = "<group>"; };
 		CBDCAB342724413D0041C31A /* FriendCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCellItem.swift; sourceTree = "<group>"; };
@@ -158,6 +172,8 @@
 		CB360C0A271E0255002830F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CBD2033D272918E300CBB18E /* FriendsTableViewDelegate */,
+				CBD2033C272918D900CBB18E /* FriendsTableViewDataSource */,
 				CB88D6EC271F50E80054C608 /* FriendsTableViewManager */,
 				CB360C17271E06B0002830F2 /* FriendsViewController.swift */,
 				CB360C18271E06B0002830F2 /* FriendsViewController.xib */,
@@ -181,6 +197,7 @@
 			children = (
 				CB360BF6271E014B002830F2 /* FriendsPresenter.swift */,
 				CB360BF8271E0155002830F2 /* FriendsPresenterInput.swift */,
+				CBD20337272893EF00CBB18E /* Decoder */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -255,6 +272,34 @@
 				CBDCAB3827244B390041C31A /* UITableViewExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CBD20337272893EF00CBB18E /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				CBD203352728938400CBB18E /* DecoderInput.swift */,
+				CBD20333272892F800CBB18E /* LoadFriendsVKDecoder.swift */,
+			);
+			path = Decoder;
+			sourceTree = "<group>";
+		};
+		CBD2033C272918D900CBB18E /* FriendsTableViewDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				CBD2033E272918FE00CBB18E /* FriendsTableViewDataSource.swift */,
+				CBD203462729192F00CBB18E /* FriendsTableViewDataSourceInput.swift */,
+			);
+			path = FriendsTableViewDataSource;
+			sourceTree = "<group>";
+		};
+		CBD2033D272918E300CBB18E /* FriendsTableViewDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				CBD203402729191000CBB18E /* FriendsTableViewDelegate.swift */,
+				CBD203422729191A00CBB18E /* FriendsTableViewDelegateInput.swift */,
+				CBD203442729192200CBB18E /* FriendsTableViewDelegateListener.swift */,
+			);
+			path = FriendsTableViewDelegate;
 			sourceTree = "<group>";
 		};
 		CBFE19572724353800F1FC90 /* VK */ = {
@@ -349,7 +394,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBA97A3C2721EA0C001DD5EF /* UIImageViewExtension.swift in Sources */,
+				CBD203362728938400CBB18E /* DecoderInput.swift in Sources */,
 				CB1A1D4E2720804C00D27AC8 /* FriendsConfiguratorInput.swift in Sources */,
+				CBD203432729191A00CBB18E /* FriendsTableViewDelegateInput.swift in Sources */,
 				CB88D6EE271F50FE0054C608 /* FriendsTableViewManager.swift in Sources */,
 				CB1A1D512720832400D27AC8 /* FriendsRouter.swift in Sources */,
 				CB360C03271E01DB002830F2 /* NetworkEngine.swift in Sources */,
@@ -364,17 +411,22 @@
 				CBDCAB33272439560041C31A /* VKFriendsResponse.swift in Sources */,
 				CB360BDD271DF970002830F2 /* AppDelegate.swift in Sources */,
 				CB3AB075271FEEAA00507609 /* VKNetworkCommand.swift in Sources */,
+				CBD203452729192300CBB18E /* FriendsTableViewDelegateListener.swift in Sources */,
 				CB1A1D552720865D00D27AC8 /* FriendsInteractorOutput.swift in Sources */,
 				CB360BDF271DF970002830F2 /* SceneDelegate.swift in Sources */,
 				CB3AB077271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift in Sources */,
+				CBD2033F272918FF00CBB18E /* FriendsTableViewDataSource.swift in Sources */,
 				CBDCAB352724413D0041C31A /* FriendCellItem.swift in Sources */,
 				CB360BFD271E017A002830F2 /* FriendsInteractorInput.swift in Sources */,
 				CB360BF9271E0155002830F2 /* FriendsPresenterInput.swift in Sources */,
 				CB1A1D5A27209C5F00D27AC8 /* CommonTableViewCell.swift in Sources */,
+				CBD20334272892F800CBB18E /* LoadFriendsVKDecoder.swift in Sources */,
+				CBD203412729191000CBB18E /* FriendsTableViewDelegate.swift in Sources */,
 				CB88D6F5271F52730054C608 /* FriendsTableViewManagerInput.swift in Sources */,
 				CB360C13271E0535002830F2 /* FriendTableViewCell.swift in Sources */,
 				CB360BF5271E0122002830F2 /* FriendsViewControllerInput.swift in Sources */,
 				CBDCAB3927244B390041C31A /* UITableViewExtension.swift in Sources */,
+				CBD203472729192F00CBB18E /* FriendsTableViewDataSourceInput.swift in Sources */,
 				CB88D6F0271F513E0054C608 /* FriendsTableViewManagerListener.swift in Sources */,
 				CB1A1D5727209C2D00D27AC8 /* CellEntity.swift in Sources */,
 				CB360BFB271E016F002830F2 /* FriendsInteractor.swift in Sources */,

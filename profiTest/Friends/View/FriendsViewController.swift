@@ -8,21 +8,23 @@
 import UIKit
 
 final class FriendsViewController: UIViewController {
-
-    @IBOutlet weak var searchButton: UIButton!
-    @IBOutlet weak var searchTextField: UITextField!
-    @IBOutlet weak var friendsTableView: UITableView!
+    
+    @IBOutlet private var searchButton: UIButton!
+    @IBOutlet private var searchTextField: UITextField!
+    @IBOutlet private var friendsTableView: UITableView!
     
     var presenter: FriendsPresenterInput!
     
     private let configurator: FriendsConfiguratorInput = FriendsConfigurator()
-    private let tableViewManager: FriendsTableViewManagerInput = FriendsTableViewManager()
+    
+    private let tableViewDelegate: FriendsTableViewDelegateInput = FriendsTableViewDelegate()
+    private let tableViewDataSource: FriendsTableViewDataSourceInput = FriendsTableViewDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configurator.configure(with: self)
-        tableViewManager.subcribe(listener: self)
-        tableViewManager.setTableView(tableView: friendsTableView)
+        tableViewDelegate.subcribe(listener: self, tableView: friendsTableView)
+        tableViewDataSource.setTableView(tableView: friendsTableView)
         setupViews()
     }
     
@@ -43,7 +45,7 @@ extension FriendsViewController: FriendsViewControllerInput {
     }
     
     func setTableData(data: [CellEntity]) {
-        self.tableViewManager.setDataset(data: data)
+        self.tableViewDataSource.setDataset(data: data)
     }
     
     func dismissKeyboard() {
@@ -51,7 +53,7 @@ extension FriendsViewController: FriendsViewControllerInput {
     }
 }
 
-extension FriendsViewController: FriendsTableViewManagerListener {
+extension FriendsViewController: FriendsTableViewDelegateListener {
     func didSelectRow(at indexPath: IndexPath) {
         presenter.didSelectRow(at: indexPath)
     }
