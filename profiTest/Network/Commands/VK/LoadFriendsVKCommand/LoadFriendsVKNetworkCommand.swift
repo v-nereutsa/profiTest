@@ -23,20 +23,4 @@ final class LoadFriendsVKNetworkCommand: VKNetworkCommand {
         self.userID = userID
     }
 
-    
-    func decodeResponse(data: Data) -> Result<VKFriendsResponse, Error> {
-        let decoder = JSONDecoder()
-        do {
-            let response = try decoder.decode(VKFriendsResponse.self, from: data)
-            return .success(response)
-        } catch {
-            do {
-                let error = try decoder.decode(VKFriendsAPIError.self, from: data)
-                return .failure(error)
-            } catch {
-                return .failure(NetworkError.decodeResponseError(errorDescription: "Error while decoding response."))
-            }
-        }
-    }
-
 }
