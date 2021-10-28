@@ -10,7 +10,7 @@ import UIKit
 class FriendTableViewCell: UITableViewCell {
 
     @IBOutlet weak var friendName: UILabel!
-    @IBOutlet weak var friendImageView: UIImageView!
+    @IBOutlet weak var friendImageView: CustomImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,9 +22,9 @@ class FriendTableViewCell: UITableViewCell {
 extension FriendTableViewCell: CommonTableViewCell {
     func configure(with value: CellEntity) {
         let cellData = value as! FriendCellItem
-
+        
         friendImageView.image = nil
-        friendImageView.downloadImage(from: URL(string: cellData.photoURL))
+        friendImageView.loadImage(from: NSURL(string: cellData.photoURL))
         friendName.text = cellData.fullName
     }
 }

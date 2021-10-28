@@ -32,8 +32,13 @@
 		CB3AB075271FEEAA00507609 /* VKNetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3AB074271FEEAA00507609 /* VKNetworkCommand.swift */; };
 		CB3AB077271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3AB076271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift */; };
 		CB5D7E452721D415004C43C2 /* AlertData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D7E442721D415004C43C2 /* AlertData.swift */; };
+		CB8276EC272A8E8E00895E0B /* ImageLoadingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8276EB272A8E8E00895E0B /* ImageLoadingManager.swift */; };
+		CB8276EE272A8F4500895E0B /* RemoteImageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8276ED272A8F4500895E0B /* RemoteImageDataSource.swift */; };
+		CB8276F0272A8F4F00895E0B /* LocalImageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8276EF272A8F4F00895E0B /* LocalImageDataSource.swift */; };
+		CB8276F2272A947800895E0B /* LocalImageDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8276F1272A947800895E0B /* LocalImageDataSourceImpl.swift */; };
+		CB8276F4272A947F00895E0B /* RemoteImageDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8276F3272A947F00895E0B /* RemoteImageDataSourceImpl.swift */; };
+		CB8276F6272AA60900895E0B /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8276F5272AA60900895E0B /* CustomImageView.swift */; };
 		CB88D6E9271F4E2E0054C608 /* NetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6E8271F4E2E0054C608 /* NetworkCommand.swift */; };
-		CBA97A3C2721EA0C001DD5EF /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA97A3B2721EA0C001DD5EF /* UIImageViewExtension.swift */; };
 		CBD20334272892F800CBB18E /* FriendsVKDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD20333272892F800CBB18E /* FriendsVKDecoder.swift */; };
 		CBD203362728938400CBB18E /* LoadFriendsVKDecoderInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD203352728938400CBB18E /* LoadFriendsVKDecoderInput.swift */; };
 		CBD2033F272918FF00CBB18E /* FriendsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD2033E272918FE00CBB18E /* FriendsTableViewDataSource.swift */; };
@@ -78,8 +83,13 @@
 		CB3AB074271FEEAA00507609 /* VKNetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKNetworkCommand.swift; sourceTree = "<group>"; };
 		CB3AB076271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFriendsVKNetworkCommand.swift; sourceTree = "<group>"; };
 		CB5D7E442721D415004C43C2 /* AlertData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertData.swift; sourceTree = "<group>"; };
+		CB8276EB272A8E8E00895E0B /* ImageLoadingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingManager.swift; sourceTree = "<group>"; };
+		CB8276ED272A8F4500895E0B /* RemoteImageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageDataSource.swift; sourceTree = "<group>"; };
+		CB8276EF272A8F4F00895E0B /* LocalImageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalImageDataSource.swift; sourceTree = "<group>"; };
+		CB8276F1272A947800895E0B /* LocalImageDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalImageDataSourceImpl.swift; sourceTree = "<group>"; };
+		CB8276F3272A947F00895E0B /* RemoteImageDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageDataSourceImpl.swift; sourceTree = "<group>"; };
+		CB8276F5272AA60900895E0B /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		CB88D6E8271F4E2E0054C608 /* NetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCommand.swift; sourceTree = "<group>"; };
-		CBA97A3B2721EA0C001DD5EF /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		CBD20333272892F800CBB18E /* FriendsVKDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsVKDecoder.swift; sourceTree = "<group>"; };
 		CBD203352728938400CBB18E /* LoadFriendsVKDecoderInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFriendsVKDecoderInput.swift; sourceTree = "<group>"; };
 		CBD2033E272918FE00CBB18E /* FriendsTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewDataSource.swift; sourceTree = "<group>"; };
@@ -185,6 +195,7 @@
 			children = (
 				CB360BDC271DF970002830F2 /* AppDelegate.swift */,
 				CB360BDE271DF970002830F2 /* SceneDelegate.swift */,
+				CB8276EA272A8E7E00895E0B /* ImageLoading */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -232,6 +243,27 @@
 			path = Friends;
 			sourceTree = "<group>";
 		};
+		CB8276EA272A8E7E00895E0B /* ImageLoading */ = {
+			isa = PBXGroup;
+			children = (
+				CB8276F7272AA60D00895E0B /* View */,
+				CB8276EB272A8E8E00895E0B /* ImageLoadingManager.swift */,
+				CB8276ED272A8F4500895E0B /* RemoteImageDataSource.swift */,
+				CB8276F3272A947F00895E0B /* RemoteImageDataSourceImpl.swift */,
+				CB8276EF272A8F4F00895E0B /* LocalImageDataSource.swift */,
+				CB8276F1272A947800895E0B /* LocalImageDataSourceImpl.swift */,
+			);
+			path = ImageLoading;
+			sourceTree = "<group>";
+		};
+		CB8276F7272AA60D00895E0B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB8276F5272AA60900895E0B /* CustomImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CB88D6E7271F4DF30054C608 /* Commands */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,7 +286,6 @@
 		CBA97A3A2721E9FB001DD5EF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CBA97A3B2721EA0C001DD5EF /* UIImageViewExtension.swift */,
 				CBDCAB3827244B390041C31A /* UITableViewExtension.swift */,
 			);
 			path = Extensions;
@@ -390,21 +421,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBA97A3C2721EA0C001DD5EF /* UIImageViewExtension.swift in Sources */,
 				CBD203362728938400CBB18E /* LoadFriendsVKDecoderInput.swift in Sources */,
 				CB1A1D4E2720804C00D27AC8 /* FriendsConfiguratorInput.swift in Sources */,
 				CBD203432729191A00CBB18E /* FriendsTableViewDelegateInput.swift in Sources */,
 				CB1A1D512720832400D27AC8 /* FriendsRouter.swift in Sources */,
 				CB360C03271E01DB002830F2 /* NetworkEngine.swift in Sources */,
+				CB8276F0272A8F4F00895E0B /* LocalImageDataSource.swift in Sources */,
+				CB8276F4272A947F00895E0B /* RemoteImageDataSourceImpl.swift in Sources */,
 				CB360C01271E01D2002830F2 /* NetworkClient.swift in Sources */,
 				CBF46D872729AA7100E4A4A7 /* FriendsService.swift in Sources */,
 				CB88D6E9271F4E2E0054C608 /* NetworkCommand.swift in Sources */,
 				CB1A1D4C2720803500D27AC8 /* FriendsConfigurator.swift in Sources */,
 				CB360C19271E06B0002830F2 /* FriendsViewController.swift in Sources */,
 				CBFE19562724331F00F1FC90 /* NetworkError.swift in Sources */,
+				CB8276EC272A8E8E00895E0B /* ImageLoadingManager.swift in Sources */,
 				CB1A1D532720832D00D27AC8 /* FriendsRouterInput.swift in Sources */,
 				CBDCAB312724393E0041C31A /* VKFriendsAPIError.swift in Sources */,
+				CB8276F2272A947800895E0B /* LocalImageDataSourceImpl.swift in Sources */,
 				CB5D7E452721D415004C43C2 /* AlertData.swift in Sources */,
+				CB8276EE272A8F4500895E0B /* RemoteImageDataSource.swift in Sources */,
 				CBDCAB33272439560041C31A /* VKFriendsResponse.swift in Sources */,
 				CB360BDD271DF970002830F2 /* AppDelegate.swift in Sources */,
 				CB3AB075271FEEAA00507609 /* VKNetworkCommand.swift in Sources */,
@@ -416,6 +451,7 @@
 				CBDCAB352724413D0041C31A /* FriendCellItem.swift in Sources */,
 				CB360BFD271E017A002830F2 /* FriendsInteractorInput.swift in Sources */,
 				CB360BF9271E0155002830F2 /* FriendsPresenterInput.swift in Sources */,
+				CB8276F6272AA60900895E0B /* CustomImageView.swift in Sources */,
 				CB1A1D5A27209C5F00D27AC8 /* CommonTableViewCell.swift in Sources */,
 				CBD20334272892F800CBB18E /* FriendsVKDecoder.swift in Sources */,
 				CBD203412729191000CBB18E /* FriendsTableViewDelegate.swift in Sources */,
