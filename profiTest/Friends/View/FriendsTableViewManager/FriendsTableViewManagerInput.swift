@@ -2,7 +2,7 @@
 //  FriendsTableViewManagerInput.swift
 //  profiTest
 //
-//  Created by Владимир Нереуца on 19.10.2021.
+//  Created by Владимир Нереуца on 28.10.2021.
 //
 
 import Foundation
@@ -12,4 +12,6 @@ protocol FriendsTableViewManagerInput {
     func subcribe(listener: FriendsTableViewManagerListener)
     func setTableView(tableView: UITableView)
     func setDataset(data: [CellEntity])
+    func showEmptyTableMessage(message: String)
+    func removeEmptyTableMessage()
 }

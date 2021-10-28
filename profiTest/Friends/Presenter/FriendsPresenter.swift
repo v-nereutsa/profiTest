@@ -17,7 +17,7 @@ final class FriendsPresenter: FriendsPresenterInput {
     
     private var dataset = [FriendCellItem]()
     
-    required init(view: FriendsViewControllerInput, router: FriendsRouterInput) {
+    init(view: FriendsViewControllerInput, router: FriendsRouterInput) {
         self.view = view
         self.router = router
     }
@@ -25,7 +25,7 @@ final class FriendsPresenter: FriendsPresenterInput {
     func onSearchClicked(userId: String?) {
         if let userId = userId, Int(userId) != nil {
             view.dismissKeyboard()
-            router.showLoading(enable: true)
+            view.showLoading(isLoading: true)
             interactor.loadFriends(for: userId)
         } else {
             router.showAlert(with: AlertData(title: "Error", message: "Invalid user identifier"))
@@ -34,7 +34,7 @@ final class FriendsPresenter: FriendsPresenterInput {
     
     func didSelectRow(at indexPath: IndexPath) {
         let userId = "\(dataset[indexPath.row].userID)"
-        router.showLoading(enable: true)
+        view.showLoading(isLoading: true)
         interactor.loadFriends(for: userId)
     }
 }
@@ -43,13 +43,18 @@ extension FriendsPresenter: FriendsInteractorOutput {
     
     func onFriendsRecevied(data: VKFriendsResponse, userId: String) {
         dataset = mapData(data: data)
-        router.showLoading(enable: false)
+        view.showLoading(isLoading: false)
         view.setTableData(data: dataset)
+        if dataset.count == 0 {
+            view.showEmptyTableMessage(message: "Friends list is empty")
+        } else {
+            view.removeEmptyTableMessage()
+        }
         view.updateUserIdentifier(value: userId)
     }
     
     func onErrorReceived(error: Error) {
-        router.showLoading(enable: false)
+        view.showLoading(isLoading: false)
         switch error {
         case is VKFriendsAPIError:
             let concreteError = error as! VKFriendsAPIError

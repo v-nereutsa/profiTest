@@ -8,14 +8,17 @@
 import UIKit
 
 final class FriendsViewController: UIViewController {
-
-    @IBOutlet weak var searchButton: UIButton!
-    @IBOutlet weak var searchTextField: UITextField!
-    @IBOutlet weak var friendsTableView: UITableView!
+    
+    @IBOutlet private var searchButton: UIButton!
+    @IBOutlet private var searchTextField: UITextField!
+    @IBOutlet private var friendsTableView: UITableView!
     
     var presenter: FriendsPresenterInput!
     
+    private var loadingView: UIView!
+    
     private let configurator: FriendsConfiguratorInput = FriendsConfigurator()
+    
     private let tableViewManager: FriendsTableViewManagerInput = FriendsTableViewManager()
     
     override func viewDidLoad() {
@@ -38,25 +41,56 @@ final class FriendsViewController: UIViewController {
 }
 
 extension FriendsViewController: FriendsViewControllerInput {
+    
     func updateUserIdentifier(value: String) {
-        DispatchQueue.main.async {
-            self.searchTextField.text = value
-        }
+        searchTextField.text = value
     }
     
     func setTableData(data: [CellEntity]) {
-        DispatchQueue.main.async {
-            self.tableViewManager.setDataset(data: data)
-        }
+        tableViewManager.setDataset(data: data)
     }
     
     func dismissKeyboard() {
         searchTextField.resignFirstResponder()
     }
+    
+    func showLoading(isLoading: Bool) {
+        if loadingView == nil {
+            loadingView = createLoadingView()
+            view.addSubview(loadingView)
+        }
+        UIView.animate(withDuration: 0.25, animations: {
+            self.loadingView.alpha = isLoading ? 1 : 0
+        })
+    }
+    
+    func showEmptyTableMessage(message: String) {
+        tableViewManager.showEmptyTableMessage(message: message)
+    }
+    
+    func removeEmptyTableMessage() {
+        tableViewManager.removeEmptyTableMessage()
+    }
+    
 }
 
 extension FriendsViewController: FriendsTableViewManagerListener {
     func didSelectRow(at indexPath: IndexPath) {
         presenter.didSelectRow(at: indexPath)
+    }
+}
+
+extension FriendsViewController {
+    func createLoadingView() -> UIView {
+        let loadingView = UIActivityIndicatorView(frame: self.view.bounds)
+        if #available(iOS 13.0, *) {
+            loadingView.style = .large
+        } else {
+            loadingView.style = .whiteLarge
+        }
+        loadingView.backgroundColor = UIColor(white: 0.5, alpha: 0.5)
+        loadingView.startAnimating()
+        loadingView.alpha = 0
+        return loadingView
     }
 }

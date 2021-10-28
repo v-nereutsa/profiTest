@@ -32,15 +32,24 @@
 		CB3AB075271FEEAA00507609 /* VKNetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3AB074271FEEAA00507609 /* VKNetworkCommand.swift */; };
 		CB3AB077271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3AB076271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift */; };
 		CB5D7E452721D415004C43C2 /* AlertData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D7E442721D415004C43C2 /* AlertData.swift */; };
+		CB709996272B077600454689 /* FriendsTableViewManagerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB709995272B077600454689 /* FriendsTableViewManagerInput.swift */; };
+		CB709998272B07AD00454689 /* FriendsTableViewManagerListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB709997272B07AC00454689 /* FriendsTableViewManagerListener.swift */; };
+		CB70999A272B0B5500454689 /* FriendsTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB709999272B0B5500454689 /* FriendsTableViewManager.swift */; };
+		CB8276EC272A8E8E00895E0B /* ImageLoadingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8276EB272A8E8E00895E0B /* ImageLoadingManager.swift */; };
+		CB8276EE272A8F4500895E0B /* RemoteImageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8276ED272A8F4500895E0B /* RemoteImageDataSource.swift */; };
+		CB8276F0272A8F4F00895E0B /* LocalImageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8276EF272A8F4F00895E0B /* LocalImageDataSource.swift */; };
+		CB8276F2272A947800895E0B /* LocalImageDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8276F1272A947800895E0B /* LocalImageDataSourceImpl.swift */; };
+		CB8276F4272A947F00895E0B /* RemoteImageDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8276F3272A947F00895E0B /* RemoteImageDataSourceImpl.swift */; };
+		CB8276F6272AA60900895E0B /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8276F5272AA60900895E0B /* CustomImageView.swift */; };
 		CB88D6E9271F4E2E0054C608 /* NetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6E8271F4E2E0054C608 /* NetworkCommand.swift */; };
-		CB88D6EE271F50FE0054C608 /* FriendsTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6ED271F50FE0054C608 /* FriendsTableViewManager.swift */; };
-		CB88D6F0271F513E0054C608 /* FriendsTableViewManagerListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6EF271F513E0054C608 /* FriendsTableViewManagerListener.swift */; };
-		CB88D6F5271F52730054C608 /* FriendsTableViewManagerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6F4271F52730054C608 /* FriendsTableViewManagerInput.swift */; };
-		CBA97A3C2721EA0C001DD5EF /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA97A3B2721EA0C001DD5EF /* UIImageViewExtension.swift */; };
+		CBD20334272892F800CBB18E /* FriendsVKDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD20333272892F800CBB18E /* FriendsVKDecoder.swift */; };
+		CBD203362728938400CBB18E /* LoadFriendsVKDecoderInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD203352728938400CBB18E /* LoadFriendsVKDecoderInput.swift */; };
 		CBDCAB312724393E0041C31A /* VKFriendsAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCAB302724393E0041C31A /* VKFriendsAPIError.swift */; };
 		CBDCAB33272439560041C31A /* VKFriendsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCAB32272439560041C31A /* VKFriendsResponse.swift */; };
 		CBDCAB352724413D0041C31A /* FriendCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCAB342724413D0041C31A /* FriendCellItem.swift */; };
 		CBDCAB3927244B390041C31A /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCAB3827244B390041C31A /* UITableViewExtension.swift */; };
+		CBF46D872729AA7100E4A4A7 /* FriendsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF46D862729AA7100E4A4A7 /* FriendsService.swift */; };
+		CBF46D892729AA7C00E4A4A7 /* FriendsServiceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF46D882729AA7C00E4A4A7 /* FriendsServiceInput.swift */; };
 		CBFE19562724331F00F1FC90 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFE19552724331F00F1FC90 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,16 +81,25 @@
 		CB3AB074271FEEAA00507609 /* VKNetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKNetworkCommand.swift; sourceTree = "<group>"; };
 		CB3AB076271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFriendsVKNetworkCommand.swift; sourceTree = "<group>"; };
 		CB5D7E442721D415004C43C2 /* AlertData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertData.swift; sourceTree = "<group>"; };
+		CB709995272B077600454689 /* FriendsTableViewManagerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManagerInput.swift; sourceTree = "<group>"; };
+		CB709997272B07AC00454689 /* FriendsTableViewManagerListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManagerListener.swift; sourceTree = "<group>"; };
+		CB709999272B0B5500454689 /* FriendsTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManager.swift; sourceTree = "<group>"; };
+		CB8276EB272A8E8E00895E0B /* ImageLoadingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingManager.swift; sourceTree = "<group>"; };
+		CB8276ED272A8F4500895E0B /* RemoteImageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageDataSource.swift; sourceTree = "<group>"; };
+		CB8276EF272A8F4F00895E0B /* LocalImageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalImageDataSource.swift; sourceTree = "<group>"; };
+		CB8276F1272A947800895E0B /* LocalImageDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalImageDataSourceImpl.swift; sourceTree = "<group>"; };
+		CB8276F3272A947F00895E0B /* RemoteImageDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageDataSourceImpl.swift; sourceTree = "<group>"; };
+		CB8276F5272AA60900895E0B /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		CB88D6E8271F4E2E0054C608 /* NetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCommand.swift; sourceTree = "<group>"; };
-		CB88D6ED271F50FE0054C608 /* FriendsTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManager.swift; sourceTree = "<group>"; };
-		CB88D6EF271F513E0054C608 /* FriendsTableViewManagerListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManagerListener.swift; sourceTree = "<group>"; };
-		CB88D6F4271F52730054C608 /* FriendsTableViewManagerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManagerInput.swift; sourceTree = "<group>"; };
-		CBA97A3B2721EA0C001DD5EF /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		CBD20333272892F800CBB18E /* FriendsVKDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsVKDecoder.swift; sourceTree = "<group>"; };
+		CBD203352728938400CBB18E /* LoadFriendsVKDecoderInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFriendsVKDecoderInput.swift; sourceTree = "<group>"; };
 		CBDCAB302724393E0041C31A /* VKFriendsAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKFriendsAPIError.swift; sourceTree = "<group>"; };
 		CBDCAB32272439560041C31A /* VKFriendsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKFriendsResponse.swift; sourceTree = "<group>"; };
 		CBDCAB342724413D0041C31A /* FriendCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCellItem.swift; sourceTree = "<group>"; };
 		CBDCAB3827244B390041C31A /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		CBDCAB4E2724A5C30041C31A /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		CBF46D862729AA7100E4A4A7 /* FriendsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsService.swift; sourceTree = "<group>"; };
+		CBF46D882729AA7C00E4A4A7 /* FriendsServiceInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsServiceInput.swift; sourceTree = "<group>"; };
 		CBFE19552724331F00F1FC90 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,7 +176,7 @@
 		CB360C0A271E0255002830F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CB88D6EC271F50E80054C608 /* FriendsTableViewManager */,
+				CB709992272B070000454689 /* FriendsTableViewManager */,
 				CB360C17271E06B0002830F2 /* FriendsViewController.swift */,
 				CB360C18271E06B0002830F2 /* FriendsViewController.xib */,
 				CB360BF4271E0122002830F2 /* FriendsViewControllerInput.swift */,
@@ -172,6 +190,7 @@
 			children = (
 				CB360BDC271DF970002830F2 /* AppDelegate.swift */,
 				CB360BDE271DF970002830F2 /* SceneDelegate.swift */,
+				CB8276EA272A8E7E00895E0B /* ImageLoading */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -198,7 +217,7 @@
 		CB360C0F271E0312002830F2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				CB88D6E7271F4DF30054C608 /* Commands */,
+				CB8276FA272AACA800895E0B /* Commands */,
 				CB360C00271E01D2002830F2 /* NetworkClient.swift */,
 				CBFE19552724331F00F1FC90 /* NetworkError.swift */,
 				CB360C02271E01DB002830F2 /* NetworkEngine.swift */,
@@ -210,7 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				CB360C0A271E0255002830F2 /* View */,
-				CB360C0D271E0285002830F2 /* Interactor */,
+				CB8276F8272AAC5D00895E0B /* Domain */,
 				CB360C0C271E0274002830F2 /* Presenter */,
 				CB88D6F1271F51790054C608 /* Entity */,
 				CB1A1D4F2720831800D27AC8 /* Router */,
@@ -219,7 +238,57 @@
 			path = Friends;
 			sourceTree = "<group>";
 		};
-		CB88D6E7271F4DF30054C608 /* Commands */ = {
+		CB709992272B070000454689 /* FriendsTableViewManager */ = {
+			isa = PBXGroup;
+			children = (
+				CB709995272B077600454689 /* FriendsTableViewManagerInput.swift */,
+				CB709999272B0B5500454689 /* FriendsTableViewManager.swift */,
+				CB709997272B07AC00454689 /* FriendsTableViewManagerListener.swift */,
+			);
+			path = FriendsTableViewManager;
+			sourceTree = "<group>";
+		};
+		CB8276EA272A8E7E00895E0B /* ImageLoading */ = {
+			isa = PBXGroup;
+			children = (
+				CB8276F7272AA60D00895E0B /* View */,
+				CB8276EB272A8E8E00895E0B /* ImageLoadingManager.swift */,
+				CB827703272AB83000895E0B /* Remote */,
+				CB827704272AB83600895E0B /* Local */,
+			);
+			path = ImageLoading;
+			sourceTree = "<group>";
+		};
+		CB8276F7272AA60D00895E0B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB8276F5272AA60900895E0B /* CustomImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB8276F8272AAC5D00895E0B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				CB360C0D271E0285002830F2 /* Interactor */,
+				CBF46D85272994C400E4A4A7 /* Service */,
+				CB88D6E7271F4DF30054C608 /* Commands */,
+				CBD20337272893EF00CBB18E /* Decoder */,
+				CB8276F9272AAC8500895E0B /* Data */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		CB8276F9272AAC8500895E0B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CBDCAB32272439560041C31A /* VKFriendsResponse.swift */,
+				CBDCAB302724393E0041C31A /* VKFriendsAPIError.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CB8276FA272AACA800895E0B /* Commands */ = {
 			isa = PBXGroup;
 			children = (
 				CB88D6E8271F4E2E0054C608 /* NetworkCommand.swift */,
@@ -228,14 +297,30 @@
 			path = Commands;
 			sourceTree = "<group>";
 		};
-		CB88D6EC271F50E80054C608 /* FriendsTableViewManager */ = {
+		CB827703272AB83000895E0B /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				CB88D6ED271F50FE0054C608 /* FriendsTableViewManager.swift */,
-				CB88D6F4271F52730054C608 /* FriendsTableViewManagerInput.swift */,
-				CB88D6EF271F513E0054C608 /* FriendsTableViewManagerListener.swift */,
+				CB8276F3272A947F00895E0B /* RemoteImageDataSourceImpl.swift */,
+				CB8276ED272A8F4500895E0B /* RemoteImageDataSource.swift */,
 			);
-			path = FriendsTableViewManager;
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		CB827704272AB83600895E0B /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				CB8276F1272A947800895E0B /* LocalImageDataSourceImpl.swift */,
+				CB8276EF272A8F4F00895E0B /* LocalImageDataSource.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		CB88D6E7271F4DF30054C608 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				CB3AB076271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift */,
+			);
+			path = Commands;
 			sourceTree = "<group>";
 		};
 		CB88D6F1271F51790054C608 /* Entity */ = {
@@ -251,29 +336,35 @@
 		CBA97A3A2721E9FB001DD5EF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CBA97A3B2721EA0C001DD5EF /* UIImageViewExtension.swift */,
 				CBDCAB3827244B390041C31A /* UITableViewExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CBD20337272893EF00CBB18E /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				CBD203352728938400CBB18E /* LoadFriendsVKDecoderInput.swift */,
+				CBD20333272892F800CBB18E /* FriendsVKDecoder.swift */,
+			);
+			path = Decoder;
+			sourceTree = "<group>";
+		};
+		CBF46D85272994C400E4A4A7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CBF46D862729AA7100E4A4A7 /* FriendsService.swift */,
+				CBF46D882729AA7C00E4A4A7 /* FriendsServiceInput.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		CBFE19572724353800F1FC90 /* VK */ = {
 			isa = PBXGroup;
 			children = (
 				CB3AB074271FEEAA00507609 /* VKNetworkCommand.swift */,
-				CBFE19582724353C00F1FC90 /* LoadFriendsVKCommand */,
 			);
 			path = VK;
-			sourceTree = "<group>";
-		};
-		CBFE19582724353C00F1FC90 /* LoadFriendsVKCommand */ = {
-			isa = PBXGroup;
-			children = (
-				CB3AB076271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift */,
-				CBDCAB32272439560041C31A /* VKFriendsResponse.swift */,
-				CBDCAB302724393E0041C31A /* VKFriendsAPIError.swift */,
-			);
-			path = LoadFriendsVKCommand;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,19 +439,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBA97A3C2721EA0C001DD5EF /* UIImageViewExtension.swift in Sources */,
+				CBD203362728938400CBB18E /* LoadFriendsVKDecoderInput.swift in Sources */,
 				CB1A1D4E2720804C00D27AC8 /* FriendsConfiguratorInput.swift in Sources */,
-				CB88D6EE271F50FE0054C608 /* FriendsTableViewManager.swift in Sources */,
 				CB1A1D512720832400D27AC8 /* FriendsRouter.swift in Sources */,
 				CB360C03271E01DB002830F2 /* NetworkEngine.swift in Sources */,
+				CB8276F0272A8F4F00895E0B /* LocalImageDataSource.swift in Sources */,
+				CB8276F4272A947F00895E0B /* RemoteImageDataSourceImpl.swift in Sources */,
 				CB360C01271E01D2002830F2 /* NetworkClient.swift in Sources */,
+				CBF46D872729AA7100E4A4A7 /* FriendsService.swift in Sources */,
 				CB88D6E9271F4E2E0054C608 /* NetworkCommand.swift in Sources */,
 				CB1A1D4C2720803500D27AC8 /* FriendsConfigurator.swift in Sources */,
 				CB360C19271E06B0002830F2 /* FriendsViewController.swift in Sources */,
 				CBFE19562724331F00F1FC90 /* NetworkError.swift in Sources */,
+				CB8276EC272A8E8E00895E0B /* ImageLoadingManager.swift in Sources */,
 				CB1A1D532720832D00D27AC8 /* FriendsRouterInput.swift in Sources */,
 				CBDCAB312724393E0041C31A /* VKFriendsAPIError.swift in Sources */,
+				CB8276F2272A947800895E0B /* LocalImageDataSourceImpl.swift in Sources */,
 				CB5D7E452721D415004C43C2 /* AlertData.swift in Sources */,
+				CB70999A272B0B5500454689 /* FriendsTableViewManager.swift in Sources */,
+				CB8276EE272A8F4500895E0B /* RemoteImageDataSource.swift in Sources */,
 				CBDCAB33272439560041C31A /* VKFriendsResponse.swift in Sources */,
 				CB360BDD271DF970002830F2 /* AppDelegate.swift in Sources */,
 				CB3AB075271FEEAA00507609 /* VKNetworkCommand.swift in Sources */,
@@ -370,15 +467,18 @@
 				CBDCAB352724413D0041C31A /* FriendCellItem.swift in Sources */,
 				CB360BFD271E017A002830F2 /* FriendsInteractorInput.swift in Sources */,
 				CB360BF9271E0155002830F2 /* FriendsPresenterInput.swift in Sources */,
+				CB8276F6272AA60900895E0B /* CustomImageView.swift in Sources */,
 				CB1A1D5A27209C5F00D27AC8 /* CommonTableViewCell.swift in Sources */,
-				CB88D6F5271F52730054C608 /* FriendsTableViewManagerInput.swift in Sources */,
+				CBD20334272892F800CBB18E /* FriendsVKDecoder.swift in Sources */,
+				CB709996272B077600454689 /* FriendsTableViewManagerInput.swift in Sources */,
+				CB709998272B07AD00454689 /* FriendsTableViewManagerListener.swift in Sources */,
 				CB360C13271E0535002830F2 /* FriendTableViewCell.swift in Sources */,
 				CB360BF5271E0122002830F2 /* FriendsViewControllerInput.swift in Sources */,
 				CBDCAB3927244B390041C31A /* UITableViewExtension.swift in Sources */,
-				CB88D6F0271F513E0054C608 /* FriendsTableViewManagerListener.swift in Sources */,
 				CB1A1D5727209C2D00D27AC8 /* CellEntity.swift in Sources */,
 				CB360BFB271E016F002830F2 /* FriendsInteractor.swift in Sources */,
 				CB360BF7271E014B002830F2 /* FriendsPresenter.swift in Sources */,
+				CBF46D892729AA7C00E4A4A7 /* FriendsServiceInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

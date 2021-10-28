@@ -2,7 +2,7 @@
 //  FriendsTableViewManager.swift
 //  profiTest
 //
-//  Created by Владимир Нереуца on 19.10.2021.
+//  Created by Владимир Нереуца on 28.10.2021.
 //
 
 import Foundation
@@ -35,17 +35,19 @@ extension FriendsTableViewManager: FriendsTableViewManagerInput {
             tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
         }
     }
+    
+    func showEmptyTableMessage(message: String) {
+        tableView.setEmptyMessage(message)
+    }
+    
+    func removeEmptyTableMessage() {
+        tableView.restore()
+    }
 }
 
 extension FriendsTableViewManager: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let count =  dataset.count
-        if count == 0 {
-            tableView.setEmptyMessage("Friends list is empty")
-        } else {
-            tableView.restore()
-        }
-        return count
+        return dataset.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
