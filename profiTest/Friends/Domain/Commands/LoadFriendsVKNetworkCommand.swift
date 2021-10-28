@@ -8,7 +8,6 @@
 import Foundation
 
 final class LoadFriendsVKNetworkCommand: VKNetworkCommand {
-    typealias T = VKFriendsResponse
     
     private let userID: String
     private let queryFields = ["photo_200_orig"]

@@ -37,7 +37,6 @@ final class FriendsViewController: UIViewController {
     private func setupViews() {
         searchTextField.placeholder = "User identifier"
         searchTextField.text = "156156099"
-        loadingView = createLoadingView()
     }
     
 }
@@ -56,6 +55,9 @@ extension FriendsViewController: FriendsViewControllerInput {
     }
     
     func showLoading() {
+        if loadingView == nil {
+            loadingView = createLoadingView()
+        }
         UIView.transition(with: self.view, duration: 0.25, options: [.transitionCrossDissolve], animations: {
             self.view.addSubview(self.loadingView)
         }, completion: nil)
