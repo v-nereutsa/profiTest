@@ -54,18 +54,13 @@ extension FriendsViewController: FriendsViewControllerInput {
         searchTextField.resignFirstResponder()
     }
     
-    func showLoading() {
+    func showLoading(isLoading: Bool) {
         if loadingView == nil {
             loadingView = createLoadingView()
+            view.addSubview(loadingView)
         }
-        UIView.transition(with: self.view, duration: 0.25, options: [.transitionCrossDissolve], animations: {
-            self.view.addSubview(self.loadingView)
-        })
-    }
-    
-    func hideLoading() {
-        UIView.transition(with: self.view, duration: 0.25, options: [.transitionCrossDissolve], animations: {
-            self.loadingView?.removeFromSuperview()
+        UIView.animate(withDuration: 0.25, animations: {
+            self.loadingView.alpha = isLoading ? 1 : 0
         })
     }
     
@@ -87,12 +82,15 @@ extension FriendsViewController: FriendsTableViewManagerListener {
 
 extension FriendsViewController {
     func createLoadingView() -> UIView {
-        let loadingView = UIView.init(frame: self.view.bounds)
+        let loadingView = UIActivityIndicatorView(frame: self.view.bounds)
+        if #available(iOS 13.0, *) {
+            loadingView.style = .large
+        } else {
+            loadingView.style = .whiteLarge
+        }
         loadingView.backgroundColor = UIColor(white: 0.5, alpha: 0.5)
-        let activityIndicator = UIActivityIndicatorView.init(style: .whiteLarge)
-        activityIndicator.startAnimating()
-        activityIndicator.center = loadingView.center
-        loadingView.addSubview(activityIndicator)
+        loadingView.startAnimating()
+        loadingView.alpha = 0
         return loadingView
     }
 }
