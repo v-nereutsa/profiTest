@@ -13,4 +13,6 @@ protocol FriendsViewControllerInput: AnyObject {
     func dismissKeyboard()
     func showLoading()
     func hideLoading()
+    func showEmptyTableMessage(message: String)
+    func removeEmptyTableMessage()
 }

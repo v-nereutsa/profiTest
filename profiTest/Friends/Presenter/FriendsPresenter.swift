@@ -45,6 +45,11 @@ extension FriendsPresenter: FriendsInteractorOutput {
         dataset = mapData(data: data)
         view.hideLoading()
         view.setTableData(data: dataset)
+        if dataset.count == 0 {
+            view.showEmptyTableMessage(message: "Friends list is empty")
+        } else {
+            view.removeEmptyTableMessage()
+        }
         view.updateUserIdentifier(value: userId)
     }
     

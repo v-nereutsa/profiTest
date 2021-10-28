@@ -32,6 +32,9 @@
 		CB3AB075271FEEAA00507609 /* VKNetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3AB074271FEEAA00507609 /* VKNetworkCommand.swift */; };
 		CB3AB077271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3AB076271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift */; };
 		CB5D7E452721D415004C43C2 /* AlertData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D7E442721D415004C43C2 /* AlertData.swift */; };
+		CB709996272B077600454689 /* FriendsTableViewManagerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB709995272B077600454689 /* FriendsTableViewManagerInput.swift */; };
+		CB709998272B07AD00454689 /* FriendsTableViewManagerListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB709997272B07AC00454689 /* FriendsTableViewManagerListener.swift */; };
+		CB70999A272B0B5500454689 /* FriendsTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB709999272B0B5500454689 /* FriendsTableViewManager.swift */; };
 		CB8276EC272A8E8E00895E0B /* ImageLoadingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8276EB272A8E8E00895E0B /* ImageLoadingManager.swift */; };
 		CB8276EE272A8F4500895E0B /* RemoteImageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8276ED272A8F4500895E0B /* RemoteImageDataSource.swift */; };
 		CB8276F0272A8F4F00895E0B /* LocalImageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8276EF272A8F4F00895E0B /* LocalImageDataSource.swift */; };
@@ -41,11 +44,6 @@
 		CB88D6E9271F4E2E0054C608 /* NetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88D6E8271F4E2E0054C608 /* NetworkCommand.swift */; };
 		CBD20334272892F800CBB18E /* FriendsVKDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD20333272892F800CBB18E /* FriendsVKDecoder.swift */; };
 		CBD203362728938400CBB18E /* LoadFriendsVKDecoderInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD203352728938400CBB18E /* LoadFriendsVKDecoderInput.swift */; };
-		CBD2033F272918FF00CBB18E /* FriendsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD2033E272918FE00CBB18E /* FriendsTableViewDataSource.swift */; };
-		CBD203412729191000CBB18E /* FriendsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD203402729191000CBB18E /* FriendsTableViewDelegate.swift */; };
-		CBD203432729191A00CBB18E /* FriendsTableViewDelegateInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD203422729191A00CBB18E /* FriendsTableViewDelegateInput.swift */; };
-		CBD203452729192300CBB18E /* FriendsTableViewDelegateListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD203442729192200CBB18E /* FriendsTableViewDelegateListener.swift */; };
-		CBD203472729192F00CBB18E /* FriendsTableViewDataSourceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD203462729192F00CBB18E /* FriendsTableViewDataSourceInput.swift */; };
 		CBDCAB312724393E0041C31A /* VKFriendsAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCAB302724393E0041C31A /* VKFriendsAPIError.swift */; };
 		CBDCAB33272439560041C31A /* VKFriendsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCAB32272439560041C31A /* VKFriendsResponse.swift */; };
 		CBDCAB352724413D0041C31A /* FriendCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDCAB342724413D0041C31A /* FriendCellItem.swift */; };
@@ -83,6 +81,9 @@
 		CB3AB074271FEEAA00507609 /* VKNetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKNetworkCommand.swift; sourceTree = "<group>"; };
 		CB3AB076271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFriendsVKNetworkCommand.swift; sourceTree = "<group>"; };
 		CB5D7E442721D415004C43C2 /* AlertData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertData.swift; sourceTree = "<group>"; };
+		CB709995272B077600454689 /* FriendsTableViewManagerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManagerInput.swift; sourceTree = "<group>"; };
+		CB709997272B07AC00454689 /* FriendsTableViewManagerListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManagerListener.swift; sourceTree = "<group>"; };
+		CB709999272B0B5500454689 /* FriendsTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewManager.swift; sourceTree = "<group>"; };
 		CB8276EB272A8E8E00895E0B /* ImageLoadingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingManager.swift; sourceTree = "<group>"; };
 		CB8276ED272A8F4500895E0B /* RemoteImageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageDataSource.swift; sourceTree = "<group>"; };
 		CB8276EF272A8F4F00895E0B /* LocalImageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalImageDataSource.swift; sourceTree = "<group>"; };
@@ -92,11 +93,6 @@
 		CB88D6E8271F4E2E0054C608 /* NetworkCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCommand.swift; sourceTree = "<group>"; };
 		CBD20333272892F800CBB18E /* FriendsVKDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsVKDecoder.swift; sourceTree = "<group>"; };
 		CBD203352728938400CBB18E /* LoadFriendsVKDecoderInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFriendsVKDecoderInput.swift; sourceTree = "<group>"; };
-		CBD2033E272918FE00CBB18E /* FriendsTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewDataSource.swift; sourceTree = "<group>"; };
-		CBD203402729191000CBB18E /* FriendsTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewDelegate.swift; sourceTree = "<group>"; };
-		CBD203422729191A00CBB18E /* FriendsTableViewDelegateInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewDelegateInput.swift; sourceTree = "<group>"; };
-		CBD203442729192200CBB18E /* FriendsTableViewDelegateListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewDelegateListener.swift; sourceTree = "<group>"; };
-		CBD203462729192F00CBB18E /* FriendsTableViewDataSourceInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewDataSourceInput.swift; sourceTree = "<group>"; };
 		CBDCAB302724393E0041C31A /* VKFriendsAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKFriendsAPIError.swift; sourceTree = "<group>"; };
 		CBDCAB32272439560041C31A /* VKFriendsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKFriendsResponse.swift; sourceTree = "<group>"; };
 		CBDCAB342724413D0041C31A /* FriendCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCellItem.swift; sourceTree = "<group>"; };
@@ -180,8 +176,7 @@
 		CB360C0A271E0255002830F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CBD2033D272918E300CBB18E /* FriendsTableViewDelegate */,
-				CBD2033C272918D900CBB18E /* FriendsTableViewDataSource */,
+				CB709992272B070000454689 /* FriendsTableViewManager */,
 				CB360C17271E06B0002830F2 /* FriendsViewController.swift */,
 				CB360C18271E06B0002830F2 /* FriendsViewController.xib */,
 				CB360BF4271E0122002830F2 /* FriendsViewControllerInput.swift */,
@@ -241,6 +236,16 @@
 				CB1A1D4A2720802300D27AC8 /* Configurator */,
 			);
 			path = Friends;
+			sourceTree = "<group>";
+		};
+		CB709992272B070000454689 /* FriendsTableViewManager */ = {
+			isa = PBXGroup;
+			children = (
+				CB709995272B077600454689 /* FriendsTableViewManagerInput.swift */,
+				CB709999272B0B5500454689 /* FriendsTableViewManager.swift */,
+				CB709997272B07AC00454689 /* FriendsTableViewManagerListener.swift */,
+			);
+			path = FriendsTableViewManager;
 			sourceTree = "<group>";
 		};
 		CB8276EA272A8E7E00895E0B /* ImageLoading */ = {
@@ -345,25 +350,6 @@
 			path = Decoder;
 			sourceTree = "<group>";
 		};
-		CBD2033C272918D900CBB18E /* FriendsTableViewDataSource */ = {
-			isa = PBXGroup;
-			children = (
-				CBD2033E272918FE00CBB18E /* FriendsTableViewDataSource.swift */,
-				CBD203462729192F00CBB18E /* FriendsTableViewDataSourceInput.swift */,
-			);
-			path = FriendsTableViewDataSource;
-			sourceTree = "<group>";
-		};
-		CBD2033D272918E300CBB18E /* FriendsTableViewDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				CBD203402729191000CBB18E /* FriendsTableViewDelegate.swift */,
-				CBD203422729191A00CBB18E /* FriendsTableViewDelegateInput.swift */,
-				CBD203442729192200CBB18E /* FriendsTableViewDelegateListener.swift */,
-			);
-			path = FriendsTableViewDelegate;
-			sourceTree = "<group>";
-		};
 		CBF46D85272994C400E4A4A7 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,7 +441,6 @@
 			files = (
 				CBD203362728938400CBB18E /* LoadFriendsVKDecoderInput.swift in Sources */,
 				CB1A1D4E2720804C00D27AC8 /* FriendsConfiguratorInput.swift in Sources */,
-				CBD203432729191A00CBB18E /* FriendsTableViewDelegateInput.swift in Sources */,
 				CB1A1D512720832400D27AC8 /* FriendsRouter.swift in Sources */,
 				CB360C03271E01DB002830F2 /* NetworkEngine.swift in Sources */,
 				CB8276F0272A8F4F00895E0B /* LocalImageDataSource.swift in Sources */,
@@ -471,26 +456,25 @@
 				CBDCAB312724393E0041C31A /* VKFriendsAPIError.swift in Sources */,
 				CB8276F2272A947800895E0B /* LocalImageDataSourceImpl.swift in Sources */,
 				CB5D7E452721D415004C43C2 /* AlertData.swift in Sources */,
+				CB70999A272B0B5500454689 /* FriendsTableViewManager.swift in Sources */,
 				CB8276EE272A8F4500895E0B /* RemoteImageDataSource.swift in Sources */,
 				CBDCAB33272439560041C31A /* VKFriendsResponse.swift in Sources */,
 				CB360BDD271DF970002830F2 /* AppDelegate.swift in Sources */,
 				CB3AB075271FEEAA00507609 /* VKNetworkCommand.swift in Sources */,
-				CBD203452729192300CBB18E /* FriendsTableViewDelegateListener.swift in Sources */,
 				CB1A1D552720865D00D27AC8 /* FriendsInteractorOutput.swift in Sources */,
 				CB360BDF271DF970002830F2 /* SceneDelegate.swift in Sources */,
 				CB3AB077271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift in Sources */,
-				CBD2033F272918FF00CBB18E /* FriendsTableViewDataSource.swift in Sources */,
 				CBDCAB352724413D0041C31A /* FriendCellItem.swift in Sources */,
 				CB360BFD271E017A002830F2 /* FriendsInteractorInput.swift in Sources */,
 				CB360BF9271E0155002830F2 /* FriendsPresenterInput.swift in Sources */,
 				CB8276F6272AA60900895E0B /* CustomImageView.swift in Sources */,
 				CB1A1D5A27209C5F00D27AC8 /* CommonTableViewCell.swift in Sources */,
 				CBD20334272892F800CBB18E /* FriendsVKDecoder.swift in Sources */,
-				CBD203412729191000CBB18E /* FriendsTableViewDelegate.swift in Sources */,
+				CB709996272B077600454689 /* FriendsTableViewManagerInput.swift in Sources */,
+				CB709998272B07AD00454689 /* FriendsTableViewManagerListener.swift in Sources */,
 				CB360C13271E0535002830F2 /* FriendTableViewCell.swift in Sources */,
 				CB360BF5271E0122002830F2 /* FriendsViewControllerInput.swift in Sources */,
 				CBDCAB3927244B390041C31A /* UITableViewExtension.swift in Sources */,
-				CBD203472729192F00CBB18E /* FriendsTableViewDataSourceInput.swift in Sources */,
 				CB1A1D5727209C2D00D27AC8 /* CellEntity.swift in Sources */,
 				CB360BFB271E016F002830F2 /* FriendsInteractor.swift in Sources */,
 				CB360BF7271E014B002830F2 /* FriendsPresenter.swift in Sources */,

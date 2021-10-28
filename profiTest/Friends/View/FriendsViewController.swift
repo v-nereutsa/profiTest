@@ -19,14 +19,13 @@ final class FriendsViewController: UIViewController {
     
     private let configurator: FriendsConfiguratorInput = FriendsConfigurator()
     
-    private let tableViewDelegate: FriendsTableViewDelegateInput = FriendsTableViewDelegate()
-    private let tableViewDataSource: FriendsTableViewDataSourceInput = FriendsTableViewDataSource()
+    private let tableViewManager: FriendsTableViewManagerInput = FriendsTableViewManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configurator.configure(with: self)
-        tableViewDelegate.subcribe(listener: self, tableView: friendsTableView)
-        tableViewDataSource.setTableView(tableView: friendsTableView)
+        tableViewManager.subcribe(listener: self)
+        tableViewManager.setTableView(tableView: friendsTableView)
         setupViews()
     }
     
@@ -42,12 +41,13 @@ final class FriendsViewController: UIViewController {
 }
 
 extension FriendsViewController: FriendsViewControllerInput {
+    
     func updateUserIdentifier(value: String) {
-        self.searchTextField.text = value
+        searchTextField.text = value
     }
     
     func setTableData(data: [CellEntity]) {
-        self.tableViewDataSource.setDataset(data: data)
+        tableViewManager.setDataset(data: data)
     }
     
     func dismissKeyboard() {
@@ -60,17 +60,26 @@ extension FriendsViewController: FriendsViewControllerInput {
         }
         UIView.transition(with: self.view, duration: 0.25, options: [.transitionCrossDissolve], animations: {
             self.view.addSubview(self.loadingView)
-        }, completion: nil)
+        })
     }
     
     func hideLoading() {
         UIView.transition(with: self.view, duration: 0.25, options: [.transitionCrossDissolve], animations: {
             self.loadingView?.removeFromSuperview()
-        }, completion: nil)
+        })
     }
+    
+    func showEmptyTableMessage(message: String) {
+        friendsTableView.setEmptyMessage(message)
+    }
+    
+    func removeEmptyTableMessage() {
+        friendsTableView.restore()
+    }
+    
 }
 
-extension FriendsViewController: FriendsTableViewDelegateListener {
+extension FriendsViewController: FriendsTableViewManagerListener {
     func didSelectRow(at indexPath: IndexPath) {
         presenter.didSelectRow(at: indexPath)
     }

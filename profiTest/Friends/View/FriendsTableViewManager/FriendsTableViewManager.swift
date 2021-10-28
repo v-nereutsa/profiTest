@@ -1,23 +1,29 @@
 //
-//  FriendsTableViewDataSource.swift
+//  FriendsTableViewManager.swift
 //  profiTest
 //
-//  Created by Владимир Нереуца on 27.10.2021.
+//  Created by Владимир Нереуца on 28.10.2021.
 //
 
 import Foundation
 import UIKit
 
-final class FriendsTableViewDataSource: NSObject {
+final class FriendsTableViewManager: NSObject {
+    weak private var listener: FriendsTableViewManagerListener!
     weak private var tableView: UITableView!
     
     private var dataset = [CellEntity]()
 }
 
-extension FriendsTableViewDataSource: FriendsTableViewDataSourceInput {
+extension FriendsTableViewManager: FriendsTableViewManagerInput {
+    
+    func subcribe(listener: FriendsTableViewManagerListener) {
+        self.listener = listener
+    }
     
     func setTableView(tableView: UITableView) {
         self.tableView = tableView
+        tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "\(FriendTableViewCell.self)", bundle: nil), forCellReuseIdentifier: "\(FriendTableViewCell.self)")
     }
@@ -31,15 +37,9 @@ extension FriendsTableViewDataSource: FriendsTableViewDataSourceInput {
     }
 }
 
-extension FriendsTableViewDataSource: UITableViewDataSource {
+extension FriendsTableViewManager: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let count =  dataset.count
-        if count == 0 {
-            tableView.setEmptyMessage("Friends list is empty")
-        } else {
-            tableView.restore()
-        }
-        return count
+        return dataset.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,5 +49,12 @@ extension FriendsTableViewDataSource: UITableViewDataSource {
         cell.configure(with: value)
         
         return cell
+    }
+}
+
+extension FriendsTableViewManager: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        listener.didSelectRow(at: indexPath)
     }
 }
