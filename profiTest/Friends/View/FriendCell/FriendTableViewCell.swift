@@ -14,7 +14,7 @@ class FriendTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        friendImageView.layer.cornerRadius = friendImageView.frame.size.width / 2
+        friendImageView.layer.cornerRadius = friendImageView.frame.width / 2
     }
     
 }
