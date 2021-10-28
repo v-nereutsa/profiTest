@@ -24,10 +24,10 @@ final class ImageLoadingManager {
             remoteImageDataSource.loadImage(from: url, completion: { [weak self] remoteImage, remoteURL in
                 if let remoteImage = remoteImage {
                     self?.localImageDataSource.cacheImage(image: remoteImage, for: url)
-                    completion(remoteImage, remoteURL)
-                    return
                 }
-                completion(nil, remoteURL)
+                DispatchQueue.main.async {
+                    completion(remoteImage, remoteURL)
+                }
             })
         }
     }

@@ -21,9 +21,7 @@ class CustomImageView: UIImageView {
         
         ImageLoadingManager.shared.getImage(for: url, completion: { [weak self] newImage, newImageURL in
             if self?.imageURL == newImageURL {
-                DispatchQueue.main.async {
-                    self?.image = newImage
-                }
+                self?.image = newImage
             }
         })
     }
