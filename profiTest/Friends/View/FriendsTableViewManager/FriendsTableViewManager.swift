@@ -35,6 +35,14 @@ extension FriendsTableViewManager: FriendsTableViewManagerInput {
             tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
         }
     }
+    
+    func showEmptyTableMessage(message: String) {
+        tableView.setEmptyMessage(message)
+    }
+    
+    func removeEmptyTableMessage() {
+        tableView.restore()
+    }
 }
 
 extension FriendsTableViewManager: UITableViewDataSource {

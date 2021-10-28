@@ -65,11 +65,11 @@ extension FriendsViewController: FriendsViewControllerInput {
     }
     
     func showEmptyTableMessage(message: String) {
-        friendsTableView.setEmptyMessage(message)
+        tableViewManager.showEmptyTableMessage(message: message)
     }
     
     func removeEmptyTableMessage() {
-        friendsTableView.restore()
+        tableViewManager.removeEmptyTableMessage()
     }
     
 }
