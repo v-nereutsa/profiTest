@@ -13,7 +13,7 @@ final class FriendsService: FriendsServiceInput {
     private let decoder: FriendsVKDecoderInput
     
     
-    required init(networkClient: NetworkClient, decoder: FriendsVKDecoderInput) {
+    init(networkClient: NetworkClient, decoder: FriendsVKDecoderInput) {
         self.networkClient = networkClient
         self.decoder = decoder
     }

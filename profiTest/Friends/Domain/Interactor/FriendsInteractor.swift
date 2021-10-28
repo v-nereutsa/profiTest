@@ -13,7 +13,7 @@ final class FriendsInteractor: FriendsInteractorInput {
     
     private let friendsService: FriendsServiceInput
     
-    required init(output: FriendsInteractorOutput, friendsService: FriendsServiceInput) {
+    init(output: FriendsInteractorOutput, friendsService: FriendsServiceInput) {
         self.output = output
         self.friendsService = friendsService
     }

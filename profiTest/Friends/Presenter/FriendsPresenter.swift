@@ -17,7 +17,7 @@ final class FriendsPresenter: FriendsPresenterInput {
     
     private var dataset = [FriendCellItem]()
     
-    required init(view: FriendsViewControllerInput, router: FriendsRouterInput) {
+    init(view: FriendsViewControllerInput, router: FriendsRouterInput) {
         self.view = view
         self.router = router
     }

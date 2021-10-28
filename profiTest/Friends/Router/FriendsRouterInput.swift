@@ -9,6 +9,5 @@ import Foundation
 import UIKit
 
 protocol FriendsRouterInput: AnyObject {
-    init(viewControler: UIViewController)
     func showAlert(with data: AlertData)
 }

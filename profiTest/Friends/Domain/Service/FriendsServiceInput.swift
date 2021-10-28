@@ -8,6 +8,5 @@
 import Foundation
 
 protocol FriendsServiceInput: AnyObject {
-    init(networkClient: NetworkClient, decoder: FriendsVKDecoderInput)
     func getFriends(for user: String, completion: @escaping (Result<VKFriendsResponse, Error>) -> Void)
 }

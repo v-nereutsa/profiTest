@@ -12,7 +12,7 @@ class FriendsRouter: FriendsRouterInput {
     
     private weak var viewController: UIViewController!
     
-    required init(viewControler: UIViewController) {
+    init(viewControler: UIViewController) {
         self.viewController = viewControler
     }
     
