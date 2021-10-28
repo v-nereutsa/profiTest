@@ -79,7 +79,7 @@ extension FriendsViewController: FriendsTableViewDelegateListener {
 extension FriendsViewController {
     func createLoadingView() -> UIView {
         let loadingView = UIView.init(frame: self.view.bounds)
-        loadingView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+        loadingView.backgroundColor = UIColor(white: 0.5, alpha: 0.5)
         let activityIndicator = UIActivityIndicatorView.init(style: .whiteLarge)
         activityIndicator.startAnimating()
         activityIndicator.center = loadingView.center
