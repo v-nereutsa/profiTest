@@ -20,10 +20,10 @@ final class FriendsService: FriendsServiceInput {
     
     func getFriends(for user: String, completion: @escaping (Result<VKFriendsResponse, Error>) -> Void) {
         let command = LoadFriendsVKNetworkCommand(userID: user)
-        networkClient.execute(command: command, completion: { [weak self] (value) in
+        networkClient.execute(command: command, completion: { [weak decoder] (value) in
             switch value {
                 case .success(let response):
-                    let decodedData = self?.decoder.decodeFriendsResponse(data: response)
+                    let decodedData = decoder?.decodeFriendsResponse(data: response)
                     switch decodedData {
                     case .success(let friendsBundle):
                         completion(.success(friendsBundle))
