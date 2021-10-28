@@ -248,10 +248,8 @@
 			children = (
 				CB8276F7272AA60D00895E0B /* View */,
 				CB8276EB272A8E8E00895E0B /* ImageLoadingManager.swift */,
-				CB8276ED272A8F4500895E0B /* RemoteImageDataSource.swift */,
-				CB8276F3272A947F00895E0B /* RemoteImageDataSourceImpl.swift */,
-				CB8276EF272A8F4F00895E0B /* LocalImageDataSource.swift */,
-				CB8276F1272A947800895E0B /* LocalImageDataSourceImpl.swift */,
+				CB827703272AB83000895E0B /* Remote */,
+				CB827704272AB83600895E0B /* Local */,
 			);
 			path = ImageLoading;
 			sourceTree = "<group>";
@@ -292,6 +290,24 @@
 				CBFE19572724353800F1FC90 /* VK */,
 			);
 			path = Commands;
+			sourceTree = "<group>";
+		};
+		CB827703272AB83000895E0B /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				CB8276F3272A947F00895E0B /* RemoteImageDataSourceImpl.swift */,
+				CB8276ED272A8F4500895E0B /* RemoteImageDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		CB827704272AB83600895E0B /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				CB8276F1272A947800895E0B /* LocalImageDataSourceImpl.swift */,
+				CB8276EF272A8F4F00895E0B /* LocalImageDataSource.swift */,
+			);
+			path = Local;
 			sourceTree = "<group>";
 		};
 		CB88D6E7271F4DF30054C608 /* Commands */ = {
