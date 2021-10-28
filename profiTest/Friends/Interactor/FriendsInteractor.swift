@@ -15,19 +15,19 @@ final class FriendsInteractor: FriendsInteractorInput {
     
     required init(output: FriendsInteractorOutput, friendsService: FriendsServiceInput) {
         self.output = output
-        self.service = service
+        self.friendsService = friendsService
     }
     
     func loadFriends(for user: String) {
-        service.getFriends(for: user, completion: { [weak self] (value) in
+        friendsService.getFriends(for: user, completion: { [weak self] (value) in
             switch value {
             case .success(let result):
                 DispatchQueue.main.async {
-                    self?.presenter.onFriendsRecevied(data: result, userId: user)
+                    self?.output.onFriendsRecevied(data: result, userId: user)
                 }
             case .failure(let error):
                 DispatchQueue.main.async {
-                    self?.presenter.onErrorReceived(error: error)
+                    self?.output.onErrorReceived(error: error)
                 }
             }
         })
