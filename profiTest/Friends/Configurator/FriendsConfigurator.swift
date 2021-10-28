@@ -15,7 +15,7 @@ final class FriendsConfigurator: FriendsConfiguratorInput {
         let networkClient = NetworkEngine.shared
         let decoder = FriendsVKDecoder()
         let service = FriendsService(networkClient: networkClient, decoder: decoder)
-        let interactor = FriendsInteractor(presenter: presenter, service: service)
+        let interactor = FriendsInteractor(output: presenter, friendsService: service)
         
         viewController.presenter = presenter
         presenter.interactor = interactor

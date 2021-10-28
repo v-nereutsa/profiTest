@@ -6,6 +6,6 @@
 //
 
 protocol FriendsInteractorInput: AnyObject {
-    init(presenter: FriendsInteractorOutput, service: FriendsServiceInput) 
+    init(output: FriendsInteractorOutput, friendsService: FriendsServiceInput) 
     func loadFriends(for user: String)
 }

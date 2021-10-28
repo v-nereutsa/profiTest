@@ -9,12 +9,12 @@ import Foundation
 
 final class FriendsInteractor: FriendsInteractorInput {
     
-    private weak var presenter: FriendsInteractorOutput!
+    private weak var output: FriendsInteractorOutput!
     
-    private let service: FriendsServiceInput
+    private let friendsService: FriendsServiceInput
     
-    required init(presenter: FriendsInteractorOutput, service: FriendsServiceInput) {
-        self.presenter = presenter
+    required init(output: FriendsInteractorOutput, friendsService: FriendsServiceInput) {
+        self.output = output
         self.service = service
     }
     
