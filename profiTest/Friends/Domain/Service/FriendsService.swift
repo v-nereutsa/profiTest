@@ -22,19 +22,21 @@ final class FriendsService: FriendsServiceInput {
         let command = LoadFriendsVKNetworkCommand(userID: user)
         networkClient.execute(command: command, completion: { [weak decoder] (value) in
             switch value {
-                case .success(let response):
-                    let decodedData = decoder?.decodeFriendsResponse(data: response)
-                    switch decodedData {
-                    case .success(let friendsBundle):
-                        completion(.success(friendsBundle))
-                    case .failure(let error):
-                        completion(.failure(error))
-                    case .none:
-                        completion(.failure(NetworkError.decodeResponseError(errorDescription: "Error while decoding response.")))
-                    }
+            case .success(let response):
+                guard let decoder = decoder else {
+                    completion(.failure(NetworkError.decodeResponseError(errorDescription: "Error while decoding response.")))
+                    return
+                }
+                let decodedData = decoder.decodeFriendsResponse(data: response)
+                switch decodedData {
+                case .success(let friendsBundle):
+                    completion(.success(friendsBundle))
                 case .failure(let error):
                     completion(.failure(error))
                 }
+            case .failure(let error):
+                completion(.failure(error))
+            }
         })
     }
 }
