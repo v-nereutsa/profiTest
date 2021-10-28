@@ -11,37 +11,25 @@ final class FriendsInteractor: FriendsInteractorInput {
     
     private weak var presenter: FriendsInteractorOutput!
     
-    private let networkClient: NetworkClient
-    private let decoder: LoadFriendsVKDecoder
+    private let service: FriendsServiceInput
     
-    
-    required init(presenter: FriendsInteractorOutput, decoder: LoadFriendsVKDecoder, networkClient: NetworkClient) {
+    required init(presenter: FriendsInteractorOutput, service: FriendsServiceInput) {
         self.presenter = presenter
-        self.networkClient = networkClient
-        self.decoder = decoder
+        self.service = service
     }
     
     func loadFriends(for user: String) {
-        let command = LoadFriendsVKNetworkCommand(userID: user)
-        networkClient.execute(command: command, completion: { [weak self] (value) in
+        service.getFriends(for: user, completion: { [weak self] (value) in
             switch value {
-                case .success(let response):
-                let decodedData = self?.decoder.decodeResponse(data: response)
-                    DispatchQueue.main.async {
-                        switch decodedData {
-                        case .success(let friendsBundle):
-                            self?.presenter.onFriendsRecevied(data: friendsBundle, userId: user)
-                        case .failure(let error):
-                            self?.presenter.onErrorReceived(error: error)
-                        case .none:
-                            break
-                        }
-                    }
-                case .failure(let error):
-                    DispatchQueue.main.async {
-                        self?.presenter.onErrorReceived(error: error)
-                    }
+            case .success(let result):
+                DispatchQueue.main.async {
+                    self?.presenter.onFriendsRecevied(data: result, userId: user)
                 }
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    self?.presenter.onErrorReceived(error: error)
+                }
+            }
         })
     }
     
