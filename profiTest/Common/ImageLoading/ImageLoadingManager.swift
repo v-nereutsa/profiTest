@@ -16,18 +16,18 @@ final class ImageLoadingManager {
     private let remoteImageDataSource: RemoteImageDataSource = RemoteImageDataSourceImpl()
     
     
-    func getImage(for url: NSURL, completion: @escaping (UIImage?, NSURL) -> Void) {
+    func getImage(for url: URL, completion: @escaping (UIImage?, URL) -> Void) {
         let image = localImageDataSource.getImage(for: url)
         if let image = image {
             completion(image, url)
         } else {
-            remoteImageDataSource.loadImage(from: url as URL, completion: { [weak self] remoteImage, remoteURL in
+            remoteImageDataSource.loadImage(from: url, completion: { [weak self] remoteImage, remoteURL in
                 if let remoteImage = remoteImage {
                     self?.localImageDataSource.cacheImage(image: remoteImage, for: url)
-                    completion(remoteImage, remoteURL as NSURL)
+                    completion(remoteImage, remoteURL)
                     return
                 }
-                completion(nil, remoteURL as NSURL)
+                completion(nil, remoteURL)
             })
         }
     }

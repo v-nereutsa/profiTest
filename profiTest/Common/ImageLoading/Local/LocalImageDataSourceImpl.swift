@@ -15,11 +15,11 @@ class LocalImageDataSourceImpl: LocalImageDataSource {
         cachedImages.countLimit = 100
     }
     
-    func cacheImage(image: UIImage, for url: NSURL) {
-        cachedImages.setObject(image, forKey: url)
+    func cacheImage(image: UIImage, for url: URL) {
+        cachedImages.setObject(image, forKey: url as NSURL)
     }
     
-    func getImage(for url: NSURL) -> UIImage? {
-        return cachedImages.object(forKey: url)
+    func getImage(for url: URL) -> UIImage? {
+        return cachedImages.object(forKey: url as NSURL)
     }
 }

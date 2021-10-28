@@ -9,9 +9,9 @@ import UIKit
 
 class CustomImageView: UIImageView {
 
-    private var imageURL: NSURL?
+    private var imageURL: URL?
     
-    func loadImage(from url: NSURL?) {
+    func loadImage(from url: URL?) {
         guard let url = url else {
             return
         }

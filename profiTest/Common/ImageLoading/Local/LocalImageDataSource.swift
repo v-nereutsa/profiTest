@@ -9,6 +9,6 @@ import Foundation
 import UIKit
 
 protocol LocalImageDataSource: AnyObject {
-    func cacheImage(image: UIImage, for url: NSURL)
-    func getImage(for url: NSURL) -> UIImage?
+    func cacheImage(image: UIImage, for url: URL)
+    func getImage(for url: URL) -> UIImage?
 }

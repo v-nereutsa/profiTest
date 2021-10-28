@@ -24,7 +24,7 @@ extension FriendTableViewCell: CommonTableViewCell {
         let cellData = value as! FriendCellItem
         
         friendImageView.image = nil
-        friendImageView.loadImage(from: NSURL(string: cellData.photoURL))
+        friendImageView.loadImage(from: URL(string: cellData.photoURL))
         friendName.text = cellData.fullName
     }
 }
