@@ -12,8 +12,6 @@ class FriendsRouter: FriendsRouterInput {
     
     private weak var viewController: UIViewController!
     
-    private var loadingView: UIView?
-    
     required init(viewControler: UIViewController) {
         self.viewController = viewControler
     }
@@ -23,30 +21,6 @@ class FriendsRouter: FriendsRouterInput {
             let alertController = UIAlertController(title: data.title, message: data.message, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.viewController.present(alertController, animated: true)
-        }
-    }
-    
-    func showLoading(enable loading: Bool) {
-        if loading {
-            let loadingView = UIView.init(frame: viewController.view.bounds)
-            loadingView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
-            let activityIndicator = UIActivityIndicatorView.init(style: .whiteLarge)
-            activityIndicator.startAnimating()
-            activityIndicator.center = loadingView.center
-            DispatchQueue.main.async {
-                loadingView.addSubview(activityIndicator)
-                UIView.transition(with: self.viewController.view, duration: 0.25, options: [.transitionCrossDissolve], animations: {
-                    self.viewController.view.addSubview(loadingView)
-                }, completion: nil)
-            }
-            self.loadingView = loadingView
-        } else {
-            DispatchQueue.main.async {
-                UIView.transition(with: self.viewController.view, duration: 0.25, options: [.transitionCrossDissolve], animations: {
-                    self.loadingView?.removeFromSuperview()
-                }, completion: nil)
-                self.loadingView = nil
-            }
         }
     }
     

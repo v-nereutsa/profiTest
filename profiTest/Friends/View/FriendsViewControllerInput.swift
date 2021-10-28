@@ -11,4 +11,6 @@ protocol FriendsViewControllerInput: AnyObject {
     func setTableData(data: [CellEntity])
     func updateUserIdentifier(value: String)
     func dismissKeyboard()
+    func showLoading()
+    func hideLoading()
 }

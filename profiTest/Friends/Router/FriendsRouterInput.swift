@@ -11,5 +11,4 @@ import UIKit
 protocol FriendsRouterInput: AnyObject {
     init(viewControler: UIViewController)
     func showAlert(with data: AlertData)
-    func showLoading(enable loading: Bool)
 }

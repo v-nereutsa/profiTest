@@ -15,6 +15,8 @@ final class FriendsViewController: UIViewController {
     
     var presenter: FriendsPresenterInput!
     
+    private var loadingView: UIView!
+    
     private let configurator: FriendsConfiguratorInput = FriendsConfigurator()
     
     private let tableViewDelegate: FriendsTableViewDelegateInput = FriendsTableViewDelegate()
@@ -35,6 +37,7 @@ final class FriendsViewController: UIViewController {
     private func setupViews() {
         searchTextField.placeholder = "User identifier"
         searchTextField.text = "156156099"
+        loadingView = createLoadingView()
     }
     
 }
@@ -51,10 +54,34 @@ extension FriendsViewController: FriendsViewControllerInput {
     func dismissKeyboard() {
         searchTextField.resignFirstResponder()
     }
+    
+    func showLoading() {
+        UIView.transition(with: self.view, duration: 0.25, options: [.transitionCrossDissolve], animations: {
+            self.view.addSubview(self.loadingView)
+        }, completion: nil)
+    }
+    
+    func hideLoading() {
+        UIView.transition(with: self.view, duration: 0.25, options: [.transitionCrossDissolve], animations: {
+            self.loadingView?.removeFromSuperview()
+        }, completion: nil)
+    }
 }
 
 extension FriendsViewController: FriendsTableViewDelegateListener {
     func didSelectRow(at indexPath: IndexPath) {
         presenter.didSelectRow(at: indexPath)
+    }
+}
+
+extension FriendsViewController {
+    func createLoadingView() -> UIView {
+        let loadingView = UIView.init(frame: self.view.bounds)
+        loadingView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+        let activityIndicator = UIActivityIndicatorView.init(style: .whiteLarge)
+        activityIndicator.startAnimating()
+        activityIndicator.center = loadingView.center
+        loadingView.addSubview(activityIndicator)
+        return loadingView
     }
 }
