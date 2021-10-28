@@ -222,6 +222,7 @@
 		CB360C0F271E0312002830F2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				CB8276FA272AACA800895E0B /* Commands */,
 				CB360C00271E01D2002830F2 /* NetworkClient.swift */,
 				CBFE19552724331F00F1FC90 /* NetworkError.swift */,
 				CB360C02271E01DB002830F2 /* NetworkEngine.swift */,
@@ -234,7 +235,7 @@
 			children = (
 				CB360C0A271E0255002830F2 /* View */,
 				CB360C0D271E0285002830F2 /* Interactor */,
-				CBF46D85272994C400E4A4A7 /* Service */,
+				CB8276F8272AAC5D00895E0B /* Domain */,
 				CB360C0C271E0274002830F2 /* Presenter */,
 				CB88D6F1271F51790054C608 /* Entity */,
 				CB1A1D4F2720831800D27AC8 /* Router */,
@@ -264,11 +265,39 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		CB88D6E7271F4DF30054C608 /* Commands */ = {
+		CB8276F8272AAC5D00895E0B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				CBF46D85272994C400E4A4A7 /* Service */,
+				CB88D6E7271F4DF30054C608 /* Commands */,
+				CBD20337272893EF00CBB18E /* Decoder */,
+				CB8276F9272AAC8500895E0B /* Data */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		CB8276F9272AAC8500895E0B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CBDCAB32272439560041C31A /* VKFriendsResponse.swift */,
+				CBDCAB302724393E0041C31A /* VKFriendsAPIError.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CB8276FA272AACA800895E0B /* Commands */ = {
 			isa = PBXGroup;
 			children = (
 				CB88D6E8271F4E2E0054C608 /* NetworkCommand.swift */,
 				CBFE19572724353800F1FC90 /* VK */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		CB88D6E7271F4DF30054C608 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				CB3AB076271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift */,
 			);
 			path = Commands;
 			sourceTree = "<group>";
@@ -296,8 +325,6 @@
 			children = (
 				CBD203352728938400CBB18E /* LoadFriendsVKDecoderInput.swift */,
 				CBD20333272892F800CBB18E /* FriendsVKDecoder.swift */,
-				CBDCAB32272439560041C31A /* VKFriendsResponse.swift */,
-				CBDCAB302724393E0041C31A /* VKFriendsAPIError.swift */,
 			);
 			path = Decoder;
 			sourceTree = "<group>";
@@ -326,8 +353,6 @@
 			children = (
 				CBF46D862729AA7100E4A4A7 /* FriendsService.swift */,
 				CBF46D882729AA7C00E4A4A7 /* FriendsServiceInput.swift */,
-				CBD20337272893EF00CBB18E /* Decoder */,
-				CB88D6E7271F4DF30054C608 /* Commands */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -336,17 +361,8 @@
 			isa = PBXGroup;
 			children = (
 				CB3AB074271FEEAA00507609 /* VKNetworkCommand.swift */,
-				CBFE19582724353C00F1FC90 /* LoadFriendsVKCommand */,
 			);
 			path = VK;
-			sourceTree = "<group>";
-		};
-		CBFE19582724353C00F1FC90 /* LoadFriendsVKCommand */ = {
-			isa = PBXGroup;
-			children = (
-				CB3AB076271FEEBD00507609 /* LoadFriendsVKNetworkCommand.swift */,
-			);
-			path = LoadFriendsVKCommand;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
