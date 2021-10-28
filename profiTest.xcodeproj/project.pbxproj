@@ -234,7 +234,6 @@
 			isa = PBXGroup;
 			children = (
 				CB360C0A271E0255002830F2 /* View */,
-				CB360C0D271E0285002830F2 /* Interactor */,
 				CB8276F8272AAC5D00895E0B /* Domain */,
 				CB360C0C271E0274002830F2 /* Presenter */,
 				CB88D6F1271F51790054C608 /* Entity */,
@@ -268,6 +267,7 @@
 		CB8276F8272AAC5D00895E0B /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				CB360C0D271E0285002830F2 /* Interactor */,
 				CBF46D85272994C400E4A4A7 /* Service */,
 				CB88D6E7271F4DF30054C608 /* Commands */,
 				CBD20337272893EF00CBB18E /* Decoder */,
